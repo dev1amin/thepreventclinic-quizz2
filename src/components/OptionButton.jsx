@@ -18,7 +18,7 @@ const OptionButton = ({
   const baseClasses = "w-full text-left font-medium rounded-2xl border border-gray-200 bg-white transition-all duration-200 cursor-pointer hover-lift hover:border-primary hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2";
   
   const variantClasses = {
-    age: "p-8 text-center relative min-h-[140px] flex flex-col justify-center",
+    'age-with-image': "p-0 text-center relative overflow-hidden",
     emoji: "p-6 text-center",
     'emoji-full': "p-5 flex items-center text-gray-800",
     grid: "p-6 text-center font-medium",
@@ -52,16 +52,7 @@ const OptionButton = ({
           />
         </div>
       )}
-      {image && variant === 'age' && (
-        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
-          <img 
-            src={image} 
-            alt="" 
-            className="w-20 h-24 object-contain"
-          />
-        </div>
-      )}
-      <span className={`${variant === 'emoji-full' ? 'flex-1' : ''} ${variant === 'age' ? 'text-lg font-semibold' : ''}`}>
+      <span className={`${variant === 'emoji-full' ? 'flex-1' : ''}`}>
         {children}
       </span>
     </button>

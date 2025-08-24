@@ -16,12 +16,12 @@ const Question = () => {
   const questions = {
     1: {
       title: "O que mais está incomodando você hoje?",
-      variant: "emoji-full",
+      variant: "simple",
       options: [
-        { text: "Cansaço constante", emoji: "/images/Semfolego.webp" },
-        { text: "Baixa libido", emoji: "/images/Triste2.png" },
-        { text: "Falta de foco / memória ruim", emoji: "/images/Estresse.png" },
-        { text: "Ganho de peso sem explicação", emoji: "/images/Balança.png" }
+        "Cansaço constante",
+        "Baixa libido",
+        "Falta de foco / memória ruim",
+        "Ganho de peso sem explicação"
       ]
     },
     2: {
@@ -36,56 +36,61 @@ const Question = () => {
     },
     3: {
       title: "Quantas horas por noite você costuma dormir?",
-      variant: "simple",
-      options: ["Menos de 5h", "5-6h", "7-8h", "Mais de 8h"]
+      variant: "emoji-full",
+      options: [
+        { text: "Menos de 5h", emoji: "/images/Nivel2.png" },
+        { text: "5-6h", emoji: "/images/Nivel3.png" },
+        { text: "7-8h", emoji: "/images/Nivel14.png" },
+        { text: "Mais de 8h", emoji: "/images/Nivel5.png" }
+      ]
     },
     4: {
       title: "Quando foi a última vez que você se sentiu realmente cheia de energia?",
-      variant: "emoji-full",
+      variant: "simple",
       options: [
-        { text: "Menos de 1 ano atrás", emoji: "/images/Cafe.png" },
-        { text: "1-2 anos atrás", emoji: "/images/2compos.png" },
-        { text: "Mais de 3 anos atrás", emoji: "/images/5copos.png" },
-        { text: "Nem lembro mais", emoji: "/images/6copos.png" }
+        "Menos de 1 ano atrás",
+        "1-2 anos atrás",
+        "Mais de 3 anos atrás",
+        "Nem lembro mais"
       ]
     },
     5: {
       title: "Como está sua libido hoje?",
-      variant: "emoji-full",
+      variant: "simple",
       options: [
-        { text: "Quase inexistente", emoji: "/images/alert.webp" },
-        { text: "Mais baixa que antes", emoji: "/images/before-flt.png" },
-        { text: "Normal", emoji: "/images/after-flt.png" },
-        { text: "Alta", emoji: "/images/right.png" }
+        "Quase inexistente",
+        "Mais baixa que antes",
+        "Normal",
+        "Alta"
       ]
     },
     6: {
       title: "O quanto você depende de café ou energéticos para funcionar?",
-      variant: "simple",
+      variant: "emoji-full",
       options: [
-        "3+ cafés por dia",
-        "1-2 cafés por dia", 
-        "Pouco / raramente",
-        "Nada, não preciso"
+        { text: "3+ cafés por dia", emoji: "/images/Cafe.png" },
+        { text: "1-2 cafés por dia", emoji: "/images/5copos.png" },
+        { text: "Pouco / raramente", emoji: "/images/2compos.png" },
+        { text: "Nada, não preciso", emoji: "/images/6copos.png" }
       ]
     },
     7: {
       title: "Você já checou seus hormônios ou vitaminas recentemente?",
-      variant: "simple",
+      variant: "emoji-full",
       options: [
-        "Sim, recentemente",
-        "Há alguns anos", 
-        "Nunca"
+        { text: "Sim, recentemente", emoji: "/images/q12o1.png" },
+        { text: "Há alguns anos", emoji: "/images/q5o2.png" },
+        { text: "Nunca", emoji: "/images/Triste2.png" }
       ]
     },
     8: {
       title: "Você perde o fôlego ao subir as escadas?",
-      variant: "emoji-full",
+      variant: "simple",
       options: [
-        { text: "Fico tão sem fôlego que nem consigo falar", emoji: "/images/icons/timer.webp" },
-        { text: "Fico um pouco sem fôlego, mas consigo falar", emoji: "/images/icons/goal.webp" },
-        { text: "Me sinto Ok depois de subir as escadas", emoji: "/images/icons/clock.webp" },
-        { text: "Me sinto super bem, posso subir vários lances", emoji: "/images/safe.webp" }
+        "Fico tão sem fôlego que nem consigo falar",
+        "Fico um pouco sem fôlego, mas consigo falar",
+        "Me sinto Ok depois de subir as escadas",
+        "Me sinto super bem, posso subir vários lances"
       ]
     }
   };

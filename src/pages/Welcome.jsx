@@ -1,6 +1,5 @@
 import QuizLayout from '../components/QuizLayout';
 import OptionButton from '../components/OptionButton';
-import PreventLogo from '../components/PreventLogo';
 
 const Welcome = () => {
   return (
@@ -8,7 +7,19 @@ const Welcome = () => {
       <div className="text-center bg-white rounded-3xl p-10 shadow-sm animate-scale-in">
         {/* Logo */}
         <div className="mb-8">
-          <PreventLogo className="w-48 h-16 mx-auto" />
+          <div className="flex items-center justify-center mb-2">
+            <svg 
+              viewBox="0 0 24 24" 
+              className="w-6 h-6 mr-2 text-primary"
+              fill="currentColor"
+            >
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+            <span className="text-xl font-bold text-gray-900 tracking-wide">
+              PREVENT!
+              <span className="text-xs align-super ml-1">™</span>
+            </span>
+          </div>
         </div>
         
         {/* Title */}
@@ -21,7 +32,7 @@ const Welcome = () => {
           Descubra a causa do seu cansaço
         </p>
         
-        {/* Age Selection */}
+        {/* Age Selection - Layout como na imagem */}
         <div className="space-y-4">
           <p className="text-sm text-gray-500 mb-6 font-medium">
             Selecione sua faixa etária para começar:
@@ -29,36 +40,72 @@ const Welcome = () => {
           
           <div className="grid grid-cols-2 gap-4">
             <OptionButton 
-              variant="age"
+              variant="age-with-image"
               to="/social"
-              image="/images/mulher_18anos_modelo2.webp"
               delay={100}
             >
-              18 a 29
+              <div className="relative h-32 bg-gray-100 rounded-xl mb-3 overflow-hidden">
+                <img 
+                  src="/images/mulher_18anos_modelo2.webp" 
+                  alt="18 a 29" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+                <div className="absolute bottom-3 left-3 text-white font-bold text-lg">
+                  18 a 29
+                </div>
+              </div>
             </OptionButton>
             <OptionButton 
-              variant="age"
+              variant="age-with-image"
               to="/social"
-              image="/images/mulher_30anos_modelo2.webp"
               delay={200}
             >
-              30 a 39
+              <div className="relative h-32 bg-gray-100 rounded-xl mb-3 overflow-hidden">
+                <img 
+                  src="/images/mulher_30anos_modelo2.webp" 
+                  alt="30 a 39" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+                <div className="absolute bottom-3 left-3 text-white font-bold text-lg">
+                  30 a 39
+                </div>
+              </div>
             </OptionButton>
             <OptionButton 
-              variant="age"
+              variant="age-with-image"
               to="/social"
-              image="/images/mulher_40anos_modelo2.webp"
               delay={300}
             >
-              40 a 49
+              <div className="relative h-32 bg-gray-100 rounded-xl mb-3 overflow-hidden">
+                <img 
+                  src="/images/mulher_40anos_modelo2.webp" 
+                  alt="40 a 49" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+                <div className="absolute bottom-3 left-3 text-white font-bold text-lg">
+                  40 a 49
+                </div>
+              </div>
             </OptionButton>
             <OptionButton 
-              variant="age"
+              variant="age-with-image"
               to="/social"
-              image="/images/mulher_50anos_modelo2.webp"
               delay={400}
             >
-              50 ou mais
+              <div className="relative h-32 bg-gray-100 rounded-xl mb-3 overflow-hidden">
+                <img 
+                  src="/images/mulher_50anos_modelo2.webp" 
+                  alt="50 ou mais" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+                <div className="absolute bottom-3 left-3 text-white font-bold text-lg">
+                  50 ou mais
+                </div>
+              </div>
             </OptionButton>
           </div>
         </div>
