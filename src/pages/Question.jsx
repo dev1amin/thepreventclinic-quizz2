@@ -138,7 +138,7 @@ const Question = () => {
 
   return (
     <QuizLayout currentStep={questionId}>
-      <div className="bg-white rounded-3xl p-8 shadow-sm">
+      <div className="rounded-3xl p-8 shadow-sm">
         {/* Question Number */}
         <div className="text-sm text-primary font-semibold mb-4">
           Pergunta {questionId} de 8
