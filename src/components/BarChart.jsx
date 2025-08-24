@@ -11,7 +11,7 @@ const BarChart = ({ data, delay = 0 }) => {
   };
 
   const getIcon = (key) => {
-    const iconProps = "w-6 h-6 text-white";
+    const iconProps = "w-5 h-5 text-white";
     switch(key) {
       case 'energia':
         return (
@@ -50,54 +50,42 @@ const BarChart = ({ data, delay = 0 }) => {
     return () => clearTimeout(timer);
   }, [delay]);
 
-  const getBarGradient = (value) => {
-    if (value >= 85) return 'bg-gradient-to-t from-primary to-primary-hover';
-    if (value >= 75) return 'bg-gradient-to-t from-primary to-primary-hover';
-    if (value >= 65) return 'bg-gradient-to-t from-accent to-secondary';
-    return 'bg-gradient-to-t from-secondary to-accent';
-  };
-
-  const getGlowColor = (value) => {
-    if (value >= 85) return 'shadow-primary/30';
-    if (value >= 75) return 'shadow-primary/30';
-    if (value >= 65) return 'shadow-accent/30';
-    return 'shadow-secondary/30';
+  const getBarColor = (value) => {
+    if (value >= 85) return 'bg-primary';
+    if (value >= 75) return 'bg-primary';
+    if (value >= 65) return 'bg-accent';
+    return 'bg-secondary';
   };
 
   return (
-    <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
-      <div className="grid grid-cols-4 gap-6">
+    <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-200">
+      <div className="grid grid-cols-4 gap-4">
         {data.map((item, index) => (
-          <div key={index} className="text-center group">
+          <div key={index} className="text-center">
             {/* Icon */}
-            <div className="w-12 h-12 mx-auto mb-3 bg-primary rounded-full flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
+            <div className="w-10 h-10 mx-auto mb-3 bg-primary rounded-full flex items-center justify-center">
               {getIcon(item.key)}
             </div>
             
             {/* Bar Container */}
-            <div className="h-32 bg-gray-100 rounded-2xl relative overflow-hidden mb-4 shadow-inner">
+            <div className="h-28 bg-gray-100 rounded-xl relative overflow-hidden mb-3">
               {/* Animated Bar */}
               <div 
-                className={`absolute bottom-0 left-0 right-0 rounded-2xl transition-all duration-1000 ease-out flex items-end justify-center ${getBarGradient(item.value)} ${getGlowColor(item.value)} ${
-                  animated ? 'shadow-lg' : ''
-                }`}
+                className={`absolute bottom-0 left-0 right-0 rounded-xl transition-all duration-800 ease-out flex items-end justify-center ${getBarColor(item.value)}`}
                 style={{ 
                   height: animated ? `${Math.max(item.value * 0.8, 15)}%` : '0%',
                   transitionDelay: `${index * 200}ms`
                 }}
               >
                 {/* Percentage Text */}
-                <span className="text-sm font-bold text-white pb-3 drop-shadow-sm">
+                <span className="text-sm font-semibold text-white pb-2">
                   {item.value}%
                 </span>
-                
-                {/* Shine Effect */}
-                <div className="absolute inset-0 bg-gradient-to-t from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             </div>
             
             {/* Label */}
-            <div className="text-xs font-bold text-gray-700 uppercase tracking-wider leading-tight">
+            <div className="text-xs font-medium text-gray-600 uppercase tracking-wide leading-tight">
               {labels[item.key] || item.label}
             </div>
           </div>
