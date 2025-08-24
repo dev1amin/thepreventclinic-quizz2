@@ -30,7 +30,7 @@ const QuizLayout = ({ children, showProgress = true, currentStep = 0, totalSteps
           <div className="max-w-md mx-auto">
             {/* Logo */}
             <div className="text-center mb-8">
-              <PreventLogo className="w-40 h-12 mx-auto" />
+              <PreventLogo className="justify-center h-12 mx-auto" />
             </div>
             
             {/* Progress Bar */}
