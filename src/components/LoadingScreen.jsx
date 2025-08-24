@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import PreventLogo from './PreventLogo';
 
 const LoadingScreen = ({ onComplete }) => {
   const [isVisible, setIsVisible] = useState(true);
@@ -34,11 +35,7 @@ const LoadingScreen = ({ onComplete }) => {
       <div className="text-center max-w-sm mx-auto">
         {/* Logo */}
         <div className="mb-12">
-          <img 
-            src="/images/zenfitlogo.jpg" 
-            alt="ZenFit" 
-            className="w-16 h-16 mx-auto rounded-full object-cover"
-          />
+          <PreventLogo className="w-40 h-12 mx-auto" />
         </div>
         
         {/* Progress Bar */}

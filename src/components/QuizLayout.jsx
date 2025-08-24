@@ -1,4 +1,5 @@
 import { useLocation } from 'react-router-dom';
+import PreventLogo from './PreventLogo';
 
 const QuizLayout = ({ children, showProgress = true, currentStep = 0, totalSteps = 11 }) => {
   const location = useLocation();
@@ -29,11 +30,7 @@ const QuizLayout = ({ children, showProgress = true, currentStep = 0, totalSteps
           <div className="max-w-md mx-auto">
             {/* Logo */}
             <div className="text-center mb-8">
-              <img 
-                src="/images/zenfitlogo.jpg" 
-                alt="ZenFit" 
-                className="w-16 h-16 mx-auto rounded-full object-cover"
-              />
+              <PreventLogo className="w-40 h-12 mx-auto" />
             </div>
             
             {/* Progress Bar */}

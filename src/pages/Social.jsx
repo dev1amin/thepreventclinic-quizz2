@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import PreventLogo from '../components/PreventLogo';
 
 const Social = () => {
   const [showButton, setShowButton] = useState(false);
@@ -20,11 +21,7 @@ const Social = () => {
           <div className="bg-white rounded-3xl p-10 shadow-sm">
             {/* Logo */}
             <div className="mb-8">
-              <img 
-                src="/images/zenfitlogo.jpg" 
-                alt="ZenFit" 
-                className="w-16 h-16 mx-auto rounded-full object-cover"
-              />
+              <PreventLogo className="w-40 h-12 mx-auto" />
             </div>
             
             {/* Statistic Circle */}

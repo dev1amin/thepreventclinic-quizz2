@@ -1,5 +1,6 @@
 import QuizLayout from '../components/QuizLayout';
 import OptionButton from '../components/OptionButton';
+import PreventLogo from '../components/PreventLogo';
 
 const Welcome = () => {
   return (
@@ -7,11 +8,7 @@ const Welcome = () => {
       <div className="text-center bg-white rounded-3xl p-10 shadow-sm animate-scale-in">
         {/* Logo */}
         <div className="mb-8">
-          <img 
-            src="/images/zenfitlogo.jpg" 
-            alt="ZenFit" 
-            className="w-20 h-20 mx-auto rounded-full object-cover"
-          />
+          <PreventLogo className="w-48 h-16 mx-auto" />
         </div>
         
         {/* Title */}
