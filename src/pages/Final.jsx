@@ -25,10 +25,16 @@ const Final = () => {
       <div className="block p-0 rounded-lg my-5">
         <div className="flex">
           <div className="w-full block px-3 my-3">
-            <span className="block text-sm font-bold">ANTES</span>
+            <div className="flex items-center justify-center">
+              <img src="/images/alert.webp" alt="" className="w-4 h-4 mr-2" />
+              <span className="block text-sm font-bold">ANTES</span>
+            </div>
           </div>
           <div className="w-full block px-3 my-3">
-            <span className="block text-sm font-bold">DEPOIS</span>
+            <div className="flex items-center justify-center">
+              <img src="/images/icons/goal.webp" alt="" className="w-4 h-4 mr-2" />
+              <span className="block text-sm font-bold">DEPOIS</span>
+            </div>
           </div>
         </div>
 

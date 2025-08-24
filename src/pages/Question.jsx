@@ -16,12 +16,12 @@ const Question = () => {
   const questions = {
     1: {
       title: "O que mais está incomodando você hoje?",
-      variant: "simple",
+      variant: "emoji",
       options: [
-        "Cansaço constante",
-        "Baixa libido",
-        "Falta de foco / memória ruim",
-        "Ganho de peso sem explicação"
+        { text: "Cansaço constante", emoji: "/images/Semfolego.webp" },
+        { text: "Baixa libido", emoji: "/images/Triste2.png" },
+        { text: "Falta de foco / memória ruim", emoji: "/images/Estresse.png" },
+        { text: "Ganho de peso sem explicação", emoji: "/images/Balança.png" }
       ]
     },
     2: {
@@ -42,12 +42,12 @@ const Question = () => {
     },
     4: {
       title: "Quando foi a última vez que você se sentiu realmente cheia de energia?",
-      variant: "simple",
+      variant: "emoji",
       options: [
-        "Menos de 1 ano atrás",
-        "1-2 anos atrás",
-        "Mais de 3 anos atrás",
-        "Nem lembro mais"
+        { text: "Menos de 1 ano atrás", emoji: "/images/Deboa.webp" },
+        { text: "1-2 anos atrás", emoji: "/images/q10o3.png" },
+        { text: "Mais de 3 anos atrás", emoji: "/images/Quasesemfolego.webp" },
+        { text: "Nem lembro mais", emoji: "/images/Semfolego.webp" }
       ]
     },
     5: {
@@ -72,11 +72,11 @@ const Question = () => {
     },
     7: {
       title: "Você já checou seus hormônios ou vitaminas recentemente?",
-      variant: "simple",
+      variant: "emoji",
       options: [
-        "Sim, recentemente",
-        "Há alguns anos",
-        "Nunca"
+        { text: "Sim, recentemente", emoji: "/images/safe.webp" },
+        { text: "Há alguns anos", emoji: "/images/icons/clock.webp" },
+        { text: "Nunca", emoji: "/images/alert.webp" }
       ]
     },
     8: {

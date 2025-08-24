@@ -76,7 +76,10 @@ const Analysis = () => {
                       <span className="text-xs text-white font-bold">45%</span>
                     </div>
                   </div>
-                  <span className="text-xs font-bold mt-3 block">ENERGIA</span>
+                  <div className="flex flex-col items-center mt-2">
+                    <img src="/images/fire.png" alt="" className="w-4 h-4 mb-1" />
+                    <span className="text-xs font-bold">ENERGIA</span>
+                  </div>
                 </div>
 
                 <div className="flex-1 border-r border-gray-200 px-2">
@@ -85,7 +88,10 @@ const Analysis = () => {
                       <span className="text-xs text-white font-bold">32%</span>
                     </div>
                   </div>
-                  <span className="text-xs font-bold mt-3 block">LIBIDO</span>
+                  <div className="flex flex-col items-center mt-2">
+                    <img src="/images/Triste2.png" alt="" className="w-4 h-4 mb-1" />
+                    <span className="text-xs font-bold">LIBIDO</span>
+                  </div>
                 </div>
 
                 <div className="flex-1 border-r border-gray-200 px-2">
@@ -94,7 +100,10 @@ const Analysis = () => {
                       <span className="text-xs text-white font-bold">58%</span>
                     </div>
                   </div>
-                  <span className="text-xs font-bold mt-3 block">CLAREZA MENTAL</span>
+                  <div className="flex flex-col items-center mt-2">
+                    <img src="/images/Estresse.png" alt="" className="w-4 h-4 mb-1" />
+                    <span className="text-xs font-bold text-center">CLAREZA MENTAL</span>
+                  </div>
                 </div>
 
                 <div className="flex-1 pl-2">
@@ -103,7 +112,10 @@ const Analysis = () => {
                       <span className="text-xs text-white font-bold">41%</span>
                     </div>
                   </div>
-                  <span className="text-xs font-bold mt-3 block">RECUPERAÇÃO</span>
+                  <div className="flex flex-col items-center mt-2">
+                    <img src="/images/icons/timer.webp" alt="" className="w-4 h-4 mb-1" />
+                    <span className="text-xs font-bold text-center">RECUPERAÇÃO</span>
+                  </div>
                 </div>
               </div>
 
