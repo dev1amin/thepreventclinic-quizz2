@@ -14,7 +14,7 @@ const Final = () => {
 
   return (
     <QuizLayout currentStep={11}>
-      <div className="bg-white rounded-3xl p-8 shadow-sm">
+      <div className="rounded-3xl p-8 shadow-sm">
         {/* Title */}
         <h1 className="text-2xl font-bold leading-tight mb-4 text-gray-900">
           Seu Protocolo Personalizado de 28 dias
