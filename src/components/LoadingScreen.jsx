@@ -11,19 +11,18 @@ const LoadingScreen = ({ onComplete }) => {
       setProgress(prev => {
         if (prev >= 100) {
           clearInterval(progressInterval);
+          // Trigger completion immediately when progress reaches 100%
+          setTimeout(() => {
+            setIsVisible(false);
+            if (onComplete) onComplete();
+          }, 200);
           return 100;
         }
         return prev + 2;
       });
-    }, 140); // 7 seconds total (100 / 2 * 140ms)
-
-    const timer = setTimeout(() => {
-      setIsVisible(false);
-      if (onComplete) onComplete();
-    }, 8000);
+    }, 100); // 5 seconds total (100 / 2 * 100ms)
 
     return () => {
-      clearTimeout(timer);
       clearInterval(progressInterval);
     };
   }, [onComplete]);
