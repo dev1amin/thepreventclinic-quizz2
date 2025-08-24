@@ -44,13 +44,13 @@ const Welcome = () => {
               to="/social"
               delay={100}
             >
-              <div className="relative h-32 bg-gray-100 rounded-xl mb-3 overflow-hidden">
+              <div className="relative h-32 bg-gray-100 rounded-xl overflow-hidden">
                 <img 
                   src="/images/mulher_18anos_modelo2.webp" 
                   alt="18 a 29" 
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0"></div>
+                <div className="absolute inset-0 bg-[rgb(184,84,80)] bg-opacity-20"></div>
                 <div className="absolute bottom-3 left-3 text-white font-bold text-lg">
                   18 a 29
                 </div>
@@ -61,13 +61,13 @@ const Welcome = () => {
               to="/social"
               delay={200}
             >
-              <div className="relative h-32 bg-gray-100 rounded-xl mb-3 overflow-hidden">
+              <div className="relative h-32 bg-gray-100 rounded-xl overflow-hidden">
                 <img 
                   src="/images/mulher_30anos_modelo2.webp" 
                   alt="30 a 39" 
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0"></div>
+                <div className="absolute inset-0 bg-[rgb(184,84,80)] bg-opacity-20"></div>
                 <div className="absolute bottom-3 left-3 text-white font-bold text-lg">
                   30 a 39
                 </div>
@@ -78,13 +78,13 @@ const Welcome = () => {
               to="/social"
               delay={300}
             >
-              <div className="relative h-32 bg-gray-100 rounded-xl mb-3 overflow-hidden">
+              <div className="relative h-32 bg-gray-100 rounded-xl overflow-hidden">
                 <img 
                   src="/images/mulher_40anos_modelo2.webp" 
                   alt="40 a 49" 
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0"></div>
+                <div className="absolute inset-0 bg-[rgb(184,84,80)] bg-opacity-20"></div>
                 <div className="absolute bottom-3 left-3 text-white font-bold text-lg">
                   40 a 49
                 </div>
@@ -95,13 +95,13 @@ const Welcome = () => {
               to="/social"
               delay={400}
             >
-              <div className="relative h-32 bg-gray-100 rounded-xl mb-3 overflow-hidden">
+              <div className="relative h-32 bg-gray-100 rounded-xl overflow-hidden">
                 <img 
                   src="/images/mulher_50anos_modelo2.webp" 
                   alt="50 ou mais" 
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0"></div>
+                <div className="absolute inset-0 bg-[rgb(184,84,80)] bg-opacity-20"></div>
                 <div className="absolute bottom-3 left-3 text-white font-bold text-lg">
                   50 ou mais
                 </div>
