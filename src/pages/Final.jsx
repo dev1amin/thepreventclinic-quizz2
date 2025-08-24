@@ -26,13 +26,13 @@ const Final = () => {
         <div className="flex">
           <div className="w-full block px-3 my-3">
             <div className="flex items-center justify-center">
-              <img src="./images/alert.webp" alt="" className="w-4 h-4 mr-2" />
+              <img src="../images/alert.webp" alt="" className="w-4 h-4 mr-2" />
               <span className="block text-sm font-bold">ANTES</span>
             </div>
           </div>
           <div className="w-full block px-3 my-3">
             <div className="flex items-center justify-center">
-              <img src="./images/icons/goal.webp" alt="" className="w-4 h-4 mr-2" />
+              <img src="../images/icons/goal.webp" alt="" className="w-4 h-4 mr-2" />
               <span className="block text-sm font-bold">DEPOIS</span>
             </div>
           </div>
@@ -41,14 +41,14 @@ const Final = () => {
         <div className="flex bg-white p-2">
           <div className="w-full block px-2">
             <img 
-              src="./images/before-flt.png" 
+              src="../images/before-flt.png" 
               alt="Antes do protocolo" 
               className="w-full max-w-48 block mx-auto"
             />
           </div>
           <div className="w-full block px-2">
             <img 
-              src="./images/after-flt.png" 
+              src="../images/after-flt.png" 
               alt="Depois do protocolo" 
               className="w-full max-w-48 block mx-auto"
             />
