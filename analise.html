@@ -15,7 +15,7 @@
 
 <!-- LINKS -->
 
-<link rel="stylesheet" href="scripts/styles.css">
+<link rel="stylesheet" href="styles/common.css">
 <link rel="shortcut icon" href="images/fav.png">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="scripts/circle/dist/circle-progress.js"></script>
@@ -23,68 +23,6 @@
 <!-- STYLES -->
 
 <style>
-
-* {
-    color: #111111;
-}
-
-body {
-    background: #FFFFFF;
-}
-
-.logo {
-    width: 90px;
-}
-
-.progress {
-    background: #C85A7B;
-}
-
-.bar {
-    background: #F5F5F5;
-}
-
-.option {
-    color: #111111;
-    background: #EEEEEE;
-}
-
-.option:hover {
-    color: #F5F5F5;
-    background: #FF769F;
-}
-
-.loading {
-    background: #EEEEEE;
-}
-
-.loading-title, .loading-text {
-    color: #111111;
-}
-
-.loading-bar-progress {
-    background: #C85A7B;
-    animation: loading-bar 7s ease-in;
-    animation-fill-mode: forwards;
-    animation-delay: 500ms;
-}
-
-.loading-bar {
-    background: #F5F5F5;
-}
-
-.continue {
-    animation: appear 500ms ease-out;
-    animation-fill-mode: forwards;
-    animation-delay: 11s;
-    background: #C85A7B;
-    color: #FFFFFF;
-}
-
-.continue:hover {
-    background: #FF769F;
-    color: #FFFFFF;
-}
 
 .continue {
     opacity: 1 !important;
@@ -270,19 +208,8 @@ body {
 
 <script>
 
-/* CIRCLE */
-
-setTimeout(()=>{
-    $('.scorebar').circleProgress({
-        value: 0.63,
-        lineCap: 'round',
-        size: 120,
-        thickness: 16,
-        fill: { gradient: ["#0f9b4a", "#14d665"] }
-    }).on('circle-animation-progress', function(event, progress) {
-        $(this).find('.scorelabel').html(Math.round(63 * progress) + '%');
-    });
-}, 9000);
+// Inicializar círculo de progresso
+initCircleProgress();
 
 </script>
 
