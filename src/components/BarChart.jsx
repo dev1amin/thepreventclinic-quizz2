@@ -3,6 +3,12 @@ import { useEffect, useState } from 'react';
 const BarChart = ({ data, delay = 0 }) => {
   const [animated, setAnimated] = useState(false);
 
+  const labels = {
+    'energia': 'ENERGIA',
+    'libido': 'LIBIDO', 
+    'clareza': 'CLAREZA MENTAL',
+    'recuperacao': 'RECUPERAÇÃO'
+  };
   useEffect(() => {
     const timer = setTimeout(() => {
       setAnimated(true);
@@ -39,7 +45,7 @@ const BarChart = ({ data, delay = 0 }) => {
               </div>
             </div>
             <div className="text-xs font-semibold text-gray-700 uppercase tracking-wide">
-              {item.label}
+              {labels[item.key] || item.label}
             </div>
           </div>
         ))}

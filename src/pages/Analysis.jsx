@@ -19,10 +19,10 @@ const Analysis = () => {
   const profileImage = getProfileImage(scores.overall);
 
   const chartData = [
-    { label: 'MOTIVAÇÃO', value: scores.energia },
-    { label: 'RESULTADO', value: scores.libido },
-    { label: 'METABOLISMO', value: scores.clareza },
-    { label: 'PREPARO', value: scores.recuperacao }
+    { key: 'energia', label: 'ENERGIA', value: scores.energia },
+    { key: 'libido', label: 'LIBIDO', value: scores.libido },
+    { key: 'clareza', label: 'CLAREZA MENTAL', value: scores.clareza },
+    { key: 'recuperacao', label: 'RECUPERAÇÃO', value: scores.recuperacao }
   ];
 
   useEffect(() => {
@@ -92,23 +92,12 @@ const Analysis = () => {
             </div>
 
             {/* Notice */}
-            <div className={`bg-primary-light rounded-2xl p-6 mb-6 transition-all duration-500 ${showNotice ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
-              <div className="flex items-start">
-                <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center mr-3 mt-1 flex-shrink-0">
-                  <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="font-bold text-gray-900 mb-2">
-                    Protocolo de 28 dias quase pronto!
-                  </h3>
-                  <p className="text-sm text-gray-700 leading-relaxed">
-                    De acordo com as suas primeiras respostas, você está pronta 
-                    para ter resultados incríveis em 28 dias com o nosso plano.
-                  </p>
-                </div>
-              </div>
+            <div className={`bg-white rounded-2xl p-6 mb-6 transition-all duration-500 border-l-4 border-primary ${showNotice ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+              <p className="text-gray-800 leading-relaxed text-center">
+                <strong>Seu corpo mostra sinais claros de desequilíbrio hormonal.</strong>
+                <br /><br />
+                Nosso protocolo de otimização hormonal + suporte com peptídeos está quase pronto para você.
+              </p>
             </div>
 
             {/* Continue Button */}

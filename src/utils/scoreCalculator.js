@@ -96,7 +96,14 @@ export const getResultStatus = (overall) => {
 };
 
 export const getProfileImage = (overall) => {
-  if (overall >= 70) return "/images/mulher_30anos_modelo2.webp";
-  if (overall >= 50) return "/images/mulher_40anos_modelo2.webp";
-  return "/images/mulher_50anos_modelo2.webp";
+  // Retorna a imagem baseada na idade selecionada na primeira página
+  const selectedAge = localStorage.getItem('selectedAge') || '30-39';
+  
+  switch(selectedAge) {
+    case '18-29': return "/images/mulher_18anos_modelo2.webp";
+    case '30-39': return "/images/mulher_30anos_modelo2.webp";
+    case '40-49': return "/images/mulher_40anos_modelo2.webp";
+    case '50+': return "/images/mulher_50anos_modelo2.webp";
+    default: return "/images/mulher_30anos_modelo2.webp";
+  }
 };

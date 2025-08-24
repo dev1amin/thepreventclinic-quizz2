@@ -1,7 +1,15 @@
 import QuizLayout from '../components/QuizLayout';
 import OptionButton from '../components/OptionButton';
+import { useNavigate } from 'react-router-dom';
 
 const Welcome = () => {
+  const navigate = useNavigate();
+
+  const handleAgeSelection = (ageRange) => {
+    localStorage.setItem('selectedAge', ageRange);
+    navigate('/social');
+  };
+
   return (
     <QuizLayout showProgress={false}>
       <div className="text-center rounded-3xl p-10 shadow-sm animate-scale-in">
@@ -41,7 +49,7 @@ const Welcome = () => {
           <div className="grid grid-cols-2 gap-4">
             <OptionButton 
               variant="age-with-image"
-              to="/social"
+              onClick={() => handleAgeSelection('18-29')}
               delay={100}
             >
               <div className="relative h-[11rem] bg-gray-100 rounded-xl overflow-hidden">
@@ -58,7 +66,7 @@ const Welcome = () => {
             </OptionButton>
             <OptionButton 
               variant="age-with-image"
-              to="/social"
+              onClick={() => handleAgeSelection('30-39')}
               delay={200}
             >
               <div className="relative h-[11rem] bg-gray-100 rounded-xl overflow-hidden">
@@ -75,7 +83,7 @@ const Welcome = () => {
             </OptionButton>
             <OptionButton 
               variant="age-with-image"
-              to="/social"
+              onClick={() => handleAgeSelection('40-49')}
               delay={300}
             >
               <div className="relative h-[11rem] bg-gray-100 rounded-xl overflow-hidden">
@@ -92,7 +100,7 @@ const Welcome = () => {
             </OptionButton>
             <OptionButton 
               variant="age-with-image"
-              to="/social"
+              onClick={() => handleAgeSelection('50+')}
               delay={400}
             >
               <div className="relative h-[11rem] bg-gray-100 rounded-xl overflow-hidden">

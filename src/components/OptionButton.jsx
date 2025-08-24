@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 const OptionButton = ({ 
   children, 
   to, 
+  onClick,
   variant = 'default',
   image,
   emoji,
@@ -12,7 +13,11 @@ const OptionButton = ({
   const navigate = useNavigate();
   
   const handleClick = () => {
-    if (to) navigate(to);
+    if (onClick) {
+      onClick();
+    } else if (to) {
+      navigate(to);
+    }
   };
 
   const baseClasses = "w-full text-left font-medium rounded-2xl border border-gray-200 bg-white transition-all duration-200 cursor-pointer hover-lift hover:border-primary hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2";
