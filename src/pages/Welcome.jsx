@@ -44,7 +44,7 @@ const Welcome = () => {
               to="/social"
               delay={100}
             >
-              <div className="relative h-32 bg-gray-100 rounded-xl overflow-hidden">
+              <div className="relative h-[11rem] bg-gray-100 rounded-xl overflow-hidden">
                 <img 
                   src="/images/mulher_18anos_modelo2.webp" 
                   alt="18 a 29" 
@@ -61,7 +61,7 @@ const Welcome = () => {
               to="/social"
               delay={200}
             >
-              <div className="relative h-32 bg-gray-100 rounded-xl overflow-hidden">
+              <div className="relative h-[11rem] bg-gray-100 rounded-xl overflow-hidden">
                 <img 
                   src="/images/mulher_30anos_modelo2.webp" 
                   alt="30 a 39" 
@@ -78,7 +78,7 @@ const Welcome = () => {
               to="/social"
               delay={300}
             >
-              <div className="relative h-32 bg-gray-100 rounded-xl overflow-hidden">
+              <div className="relative h-[11rem] bg-gray-100 rounded-xl overflow-hidden">
                 <img 
                   src="/images/mulher_40anos_modelo2.webp" 
                   alt="40 a 49" 
@@ -95,7 +95,7 @@ const Welcome = () => {
               to="/social"
               delay={400}
             >
-              <div className="relative h-32 bg-gray-100 rounded-xl overflow-hidden">
+              <div className="relative h-[11rem] bg-gray-100 rounded-xl overflow-hidden">
                 <img 
                   src="/images/mulher_50anos_modelo2.webp" 
                   alt="50 ou mais" 
