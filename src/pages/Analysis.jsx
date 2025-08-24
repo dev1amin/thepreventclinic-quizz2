@@ -75,7 +75,7 @@ const Analysis = () => {
               {/* Score Circle */}
               <div className="bg-white rounded-2xl p-6 flex flex-col items-center justify-center shadow-sm border border-gray-200">
                 <div className={`transition-all duration-1000 ${showScore ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
-                  <CircleProgress value={scores.overall / 100} size={120} delay={500} showLabel={false} />
+                  <CircleProgress value={scores.overall / 100} size={145} delay={500} showLabel={false} />
                 </div>
               </div>
 
