@@ -50,7 +50,7 @@ const Welcome = () => {
                   alt="18 a 29" 
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+                <div className="absolute inset-0"></div>
                 <div className="absolute bottom-3 left-3 text-white font-bold text-lg">
                   18 a 29
                 </div>
@@ -67,7 +67,7 @@ const Welcome = () => {
                   alt="30 a 39" 
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+                <div className="absolute inset-0"></div>
                 <div className="absolute bottom-3 left-3 text-white font-bold text-lg">
                   30 a 39
                 </div>
@@ -84,7 +84,7 @@ const Welcome = () => {
                   alt="40 a 49" 
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+                <div className="absolute inset-0"></div>
                 <div className="absolute bottom-3 left-3 text-white font-bold text-lg">
                   40 a 49
                 </div>
@@ -101,7 +101,7 @@ const Welcome = () => {
                   alt="50 ou mais" 
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+                <div className="absolute inset-0"></div>
                 <div className="absolute bottom-3 left-3 text-white font-bold text-lg">
                   50 ou mais
                 </div>
