@@ -28,7 +28,7 @@ const QuizLayout = ({ children, showProgress = true, currentStep = 0, totalSteps
         <header className="px-8 pt-8 pb-2 md:px-4 md:pt-6">
           <div className="max-w-md mx-auto text-center">
             <img 
-              src="/images/zenfitlogo.jpg" 
+              src="./images/zenfitlogo.jpg" 
               alt="ZenFit" 
               className="w-20 mx-auto mb-5 block"
             />
