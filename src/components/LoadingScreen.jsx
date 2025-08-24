@@ -35,7 +35,7 @@ const LoadingScreen = ({ onComplete }) => {
       <div className="text-center max-w-sm mx-auto">
         {/* Logo */}
         <div className="mb-12">
-          <PreventLogo className="w-40 h-12 mx-auto" />
+          <PreventLogo className="justify-center h-12 mx-auto" />
         </div>
         
         {/* Progress Bar */}
