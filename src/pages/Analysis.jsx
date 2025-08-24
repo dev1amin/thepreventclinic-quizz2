@@ -41,7 +41,7 @@ const Analysis = () => {
       {showAnalysis && (
         <main className="px-6 pt-8 pb-12">
           <div className="max-w-md mx-auto animate-fade-in">
-            <div className="bg-white rounded-3xl p-8 shadow-sm">
+            <div className="rounded-3xl p-8 shadow-sm">
               {/* Title */}
               <h1 className="text-2xl font-bold leading-tight text-center mb-8 text-gray-900">
                 Análise do seu perfil
