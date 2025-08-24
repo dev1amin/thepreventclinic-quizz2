@@ -11,20 +11,17 @@ const Analysis = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Show graphics after loading
     const graphicsTimer = setTimeout(() => {
       setShowGraphics(true);
     }, 8500);
 
-    // Show notice
     const noticeTimer = setTimeout(() => {
       setShowNotice(true);
-    }, 2000);
+    }, 11000);
 
-    // Show button
     const buttonTimer = setTimeout(() => {
       setShowButton(true);
-    }, 11000);
+    }, 12000);
 
     return () => {
       clearTimeout(graphicsTimer);
@@ -38,112 +35,120 @@ const Analysis = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-50">
       <LoadingScreen onComplete={handleLoadingComplete} />
       
       {showAnalysis && (
-        <section className="px-8 pt-4 opacity-0 animate-appear">
-          <div className="max-w-md mx-auto text-center">
-            <h1 className="text-lg font-bold leading-tight tracking-tight mb-4">
-              Análise inicial do seu perfil
-            </h1>
-            
-            <div className={`mb-4 ${showGraphics ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}>
-              <div className="flex mb-4">
-                <div className="w-full">
-                  <div className="block text-center p-4 rounded-lg">
-                    <CircleProgress value={0.63} />
-                  </div>
+        <main className="px-6 pt-8 pb-12">
+          <div className="max-w-md mx-auto animate-fade-in">
+            <div className="bg-white rounded-3xl p-8 shadow-sm">
+              {/* Title */}
+              <h1 className="text-2xl font-bold leading-tight text-center mb-8 text-gray-900">
+                Análise do seu perfil
+              </h1>
+              
+              {/* Results Container */}
+              <div className={`transition-opacity duration-500 ${showGraphics ? 'opacity-100' : 'opacity-0'}`}>
+                {/* Score Circle */}
+                <div className="text-center mb-8">
+                  <CircleProgress value={0.63} />
                 </div>
-                <div className="w-full">
-                  <div className="bg-primary-light text-primary text-xs p-2 font-bold text-center rounded-md mb-2 ml-1">
-                    Desequilíbrio Hormonal Detectado ⚠️
+
+                {/* Profile Image */}
+                <div className="text-center mb-8">
+                  <div className="inline-block bg-primary-light text-primary text-sm px-4 py-2 font-semibold rounded-full mb-4">
+                    ⚠️ Desequilíbrio Hormonal Detectado
                   </div>
-                  <div className="bg-white p-2 rounded-lg ml-1">
+                  <div className="w-32 h-32 mx-auto">
                     <img 
                       src="/images/mulher_30anos_modelo2.webp" 
-                      alt="Análise inicial do seu perfil" 
-                      className="max-w-32 mx-auto"
+                      alt="Perfil analisado" 
+                      className="w-full h-full object-contain"
                     />
                   </div>
                 </div>
+
+                {/* Metrics */}
+                <div className="bg-gray-50 rounded-2xl p-6 mb-8">
+                  <div className="grid grid-cols-4 gap-4">
+                    <div className="text-center">
+                      <div className="w-8 h-16 bg-gray-200 rounded-lg mx-auto relative overflow-hidden">
+                        <div className="w-full bg-primary absolute bottom-0 rounded-b-lg graphics1-animation flex items-end justify-center">
+                          <span className="text-xs text-white font-bold pb-1">45%</span>
+                        </div>
+                      </div>
+                      <div className="mt-3">
+                        <img src="/images/fire.png" alt="" className="w-5 h-5 mx-auto mb-1" />
+                        <span className="text-xs font-semibold text-gray-700">ENERGIA</span>
+                      </div>
+                    </div>
+
+                    <div className="text-center">
+                      <div className="w-8 h-16 bg-gray-200 rounded-lg mx-auto relative overflow-hidden">
+                        <div className="w-full bg-primary absolute bottom-0 rounded-b-lg graphics2-animation flex items-end justify-center">
+                          <span className="text-xs text-white font-bold pb-1">32%</span>
+                        </div>
+                      </div>
+                      <div className="mt-3">
+                        <img src="/images/Triste2.png" alt="" className="w-5 h-5 mx-auto mb-1" />
+                        <span className="text-xs font-semibold text-gray-700">LIBIDO</span>
+                      </div>
+                    </div>
+
+                    <div className="text-center">
+                      <div className="w-8 h-16 bg-gray-200 rounded-lg mx-auto relative overflow-hidden">
+                        <div className="w-full bg-primary absolute bottom-0 rounded-b-lg graphics3-animation flex items-end justify-center">
+                          <span className="text-xs text-white font-bold pb-1">58%</span>
+                        </div>
+                      </div>
+                      <div className="mt-3">
+                        <img src="/images/Estresse.png" alt="" className="w-5 h-5 mx-auto mb-1" />
+                        <span className="text-xs font-semibold text-gray-700 text-center">CLAREZA</span>
+                      </div>
+                    </div>
+
+                    <div className="text-center">
+                      <div className="w-8 h-16 bg-gray-200 rounded-lg mx-auto relative overflow-hidden">
+                        <div className="w-full bg-primary absolute bottom-0 rounded-b-lg graphics4-animation flex items-end justify-center">
+                          <span className="text-xs text-white font-bold pb-1">41%</span>
+                        </div>
+                      </div>
+                      <div className="mt-3">
+                        <img src="/images/icons/timer.webp" alt="" className="w-5 h-5 mx-auto mb-1" />
+                        <span className="text-xs font-semibold text-gray-700 text-center">RECUPERAÇÃO</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Notice */}
+                <div className={`bg-primary-light rounded-2xl p-6 mb-8 transition-opacity duration-500 ${showNotice ? 'opacity-100' : 'opacity-0'}`}>
+                  <div className="flex items-start">
+                    <img src="/images/right.png" alt="" className="w-6 h-6 mr-3 mt-1 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-bold text-gray-900 mb-2">
+                        Protocolo de otimização hormonal quase pronto!
+                      </h3>
+                      <p className="text-sm text-gray-700 leading-relaxed">
+                        Seu corpo mostra sinais claros de desequilíbrio hormonal. Nosso protocolo de otimização hormonal + suporte com peptídeos está quase pronto para você.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
 
-              <div className="flex bg-white p-4 rounded-lg border border-gray-200 mb-4">
-                <div className="flex-1 border-r border-gray-200 pr-2">
-                  <div className="w-8 h-20 bg-gray-100 rounded-sm mx-auto relative">
-                    <div className="w-full bg-primary absolute bottom-0 rounded-b-sm text-center graphics1-animation">
-                      <span className="text-xs text-white font-bold">45%</span>
-                    </div>
-                  </div>
-                  <div className="flex flex-col items-center mt-2">
-                    <img src="/images/fire.png" alt="" className="w-4 h-4 mb-1" />
-                    <span className="text-xs font-bold">ENERGIA</span>
-                  </div>
-                </div>
-
-                <div className="flex-1 border-r border-gray-200 px-2">
-                  <div className="w-8 h-20 bg-gray-100 rounded-sm mx-auto relative">
-                    <div className="w-full bg-primary absolute bottom-0 rounded-b-sm text-center graphics2-animation">
-                      <span className="text-xs text-white font-bold">32%</span>
-                    </div>
-                  </div>
-                  <div className="flex flex-col items-center mt-2">
-                    <img src="/images/Triste2.png" alt="" className="w-4 h-4 mb-1" />
-                    <span className="text-xs font-bold">LIBIDO</span>
-                  </div>
-                </div>
-
-                <div className="flex-1 border-r border-gray-200 px-2">
-                  <div className="w-8 h-20 bg-gray-100 rounded-sm mx-auto relative">
-                    <div className="w-full bg-primary absolute bottom-0 rounded-b-sm text-center graphics3-animation">
-                      <span className="text-xs text-white font-bold">58%</span>
-                    </div>
-                  </div>
-                  <div className="flex flex-col items-center mt-2">
-                    <img src="/images/Estresse.png" alt="" className="w-4 h-4 mb-1" />
-                    <span className="text-xs font-bold text-center">CLAREZA MENTAL</span>
-                  </div>
-                </div>
-
-                <div className="flex-1 pl-2">
-                  <div className="w-8 h-20 bg-gray-100 rounded-sm mx-auto relative">
-                    <div className="w-full bg-primary absolute bottom-0 rounded-b-sm text-center graphics4-animation">
-                      <span className="text-xs text-white font-bold">41%</span>
-                    </div>
-                  </div>
-                  <div className="flex flex-col items-center mt-2">
-                    <img src="/images/icons/timer.webp" alt="" className="w-4 h-4 mb-1" />
-                    <span className="text-xs font-bold text-center">RECUPERAÇÃO</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className={`bg-gradient-to-r from-primary-hover to-primary-hover p-4 rounded-lg mb-4 ${showNotice ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}>
-                <div className="flex items-start">
-                  <img src="/images/right.png" alt="" className="w-4 mr-2 mt-0.5" />
-                  <div className="text-left">
-                    <span className="text-sm font-bold text-gray-800 block mb-1">
-                      Protocolo de otimização hormonal quase pronto!
-                    </span>
-                    <span className="text-xs text-gray-800 leading-tight">
-                      Seu corpo mostra sinais claros de desequilíbrio hormonal. Nosso protocolo de otimização hormonal + suporte com peptídeos está quase pronto para você.
-                    </span>
-                  </div>
-                </div>
-              </div>
+              {/* Continue Button */}
+              <button
+                onClick={() => navigate('/final')}
+                className={`w-full bg-primary hover:bg-primary-hover text-white font-semibold py-4 px-8 rounded-2xl transition-all duration-200 hover-lift ${
+                  showButton ? 'opacity-100 animate-slide-up' : 'opacity-0'
+                }`}
+              >
+                Ver meu protocolo
+              </button>
             </div>
-
-            <button
-              onClick={() => navigate('/final')}
-              className={`w-full block text-center font-bold text-sm py-4 no-underline rounded-lg transition-all duration-200 bg-primary text-white hover:bg-primary-hover mb-4 ${
-                showButton ? 'opacity-100' : 'opacity-0'
-              }`}
-            >
-              Continuar
-            </button>
           </div>
-        </section>
+        </main>
       )}
     </div>
   );

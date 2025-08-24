@@ -16,7 +16,7 @@ const Question = () => {
   const questions = {
     1: {
       title: "O que mais está incomodando você hoje?",
-      variant: "emoji",
+      variant: "emoji-full",
       options: [
         { text: "Cansaço constante", emoji: "/images/Semfolego.webp" },
         { text: "Baixa libido", emoji: "/images/Triste2.png" },
@@ -26,7 +26,7 @@ const Question = () => {
     },
     2: {
       title: "Como você se sente ao longo do dia?",
-      variant: "emoji",
+      variant: "emoji-full",
       options: [
         { text: "Sempre cansada, sem energia", emoji: "/images/fire.png" },
         { text: "Cansada, mas consigo funcionar", emoji: "/images/Quasesemfolego.webp" },
@@ -36,13 +36,12 @@ const Question = () => {
     },
     3: {
       title: "Quantas horas por noite você costuma dormir?",
-      variant: "grid",
-      options: ["Menos de 5h", "5-6h", "7-8h", "Mais de 8h"],
-      image: "/images/Dormindo.webp"
+      variant: "simple",
+      options: ["Menos de 5h", "5-6h", "7-8h", "Mais de 8h"]
     },
     4: {
       title: "Quando foi a última vez que você se sentiu realmente cheia de energia?",
-      variant: "emoji",
+      variant: "emoji-full",
       options: [
         { text: "Menos de 1 ano atrás", emoji: "/images/Cafe.png" },
         { text: "1-2 anos atrás", emoji: "/images/2compos.png" },
@@ -52,7 +51,7 @@ const Question = () => {
     },
     5: {
       title: "Como está sua libido hoje?",
-      variant: "emoji",
+      variant: "emoji-full",
       options: [
         { text: "Quase inexistente", emoji: "/images/alert.webp" },
         { text: "Mais baixa que antes", emoji: "/images/before-flt.png" },
@@ -62,12 +61,12 @@ const Question = () => {
     },
     6: {
       title: "O quanto você depende de café ou energéticos para funcionar?",
-      variant: "emoji",
+      variant: "simple",
       options: [
-        { text: "3+ cafés por dia", emoji: "/images/mulher_18anos_modelo2.webp" },
-        { text: "1-2 cafés por dia", emoji: "/images/mulher_30anos_modelo2.webp" },
-        { text: "Pouco / raramente", emoji: "/images/mulher_40anos_modelo2.webp" },
-        { text: "Nada, não preciso", emoji: "/images/mulher_50anos_modelo2.webp" }
+        "3+ cafés por dia",
+        "1-2 cafés por dia", 
+        "Pouco / raramente",
+        "Nada, não preciso"
       ]
     },
     7: {
@@ -81,7 +80,7 @@ const Question = () => {
     },
     8: {
       title: "Você perde o fôlego ao subir as escadas?",
-      variant: "emoji",
+      variant: "emoji-full",
       options: [
         { text: "Fico tão sem fôlego que nem consigo falar", emoji: "/images/icons/timer.webp" },
         { text: "Fico um pouco sem fôlego, mas consigo falar", emoji: "/images/icons/goal.webp" },
@@ -98,15 +97,16 @@ const Question = () => {
   }
 
   const renderOptions = () => {
-    if (currentQuestion.variant === 'emoji') {
+    if (currentQuestion.variant === 'emoji-full') {
       return (
-        <div className="mt-8 space-y-4">
+        <div className="space-y-4">
           {currentQuestion.options.map((option, index) => (
             <OptionButton 
               key={index}
               variant="emoji-full"
               to={getNextRoute()}
               emoji={option.emoji}
+              delay={index * 100}
             >
               {option.text}
             </OptionButton>
@@ -115,38 +115,14 @@ const Question = () => {
       );
     }
 
-    if (currentQuestion.variant === 'grid') {
-      return (
-        <div className="mt-8 relative">
-          <div className="grid grid-cols-2 gap-4">
-            {currentQuestion.options.map((option, index) => (
-              <OptionButton 
-                key={index}
-                variant="grid" 
-                to={getNextRoute()}
-              >
-                {option}
-              </OptionButton>
-            ))}
-          </div>
-          {currentQuestion.image && (
-            <img 
-              src={currentQuestion.image}
-              alt=""
-              className="w-72 fixed bottom-0 left-1/2 transform -translate-x-1/2 z-0"
-            />
-          )}
-        </div>
-      );
-    }
-
     return (
-      <div className="mt-8 space-y-4">
+      <div className="space-y-4">
         {currentQuestion.options.map((option, index) => (
           <OptionButton 
             key={index}
             variant="simple"
             to={getNextRoute()}
+            delay={index * 100}
           >
             {option}
           </OptionButton>
@@ -157,11 +133,20 @@ const Question = () => {
 
   return (
     <QuizLayout currentStep={questionId}>
-      <h1 className="text-2xl font-semibold leading-tight mb-6 text-gray-900">
-        {currentQuestion.title}
-      </h1>
-      
-      {renderOptions()}
+      <div className="bg-white rounded-3xl p-8 shadow-sm">
+        {/* Question Number */}
+        <div className="text-sm text-primary font-semibold mb-4">
+          Pergunta {questionId} de 8
+        </div>
+        
+        {/* Question Title */}
+        <h1 className="text-2xl font-bold leading-tight mb-8 text-gray-900">
+          {currentQuestion.title}
+        </h1>
+        
+        {/* Options */}
+        {renderOptions()}
+      </div>
     </QuizLayout>
   );
 };

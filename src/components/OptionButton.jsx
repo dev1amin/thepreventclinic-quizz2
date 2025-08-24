@@ -6,7 +6,8 @@ const OptionButton = ({
   variant = 'default',
   image,
   emoji,
-  className = ''
+  className = '',
+  delay = 0
 }) => {
   const navigate = useNavigate();
   
@@ -14,44 +15,55 @@ const OptionButton = ({
     if (to) navigate(to);
   };
 
-  const baseClasses = "w-full block box-border font-medium text-left no-underline rounded-xl border transition-all duration-200 ease-out cursor-pointer hover:shadow-lg";
+  const baseClasses = "w-full text-left font-medium rounded-2xl border border-gray-200 bg-white transition-all duration-200 cursor-pointer hover-lift hover:border-primary hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2";
   
   const variantClasses = {
-    age: "text-center p-6 pb-36 relative m-2 font-semibold bg-white border-gray-200 hover:border-blue-500 hover:bg-blue-50",
-    emoji: "text-center m-2 p-6 bg-white border-gray-200 hover:border-blue-500 hover:bg-blue-50",
-    'emoji-full': "flex items-center p-4 bg-white border-gray-200 hover:border-blue-500 hover:bg-blue-50 text-gray-800",
-    grid: "text-center m-2 p-5 bg-white border-gray-200 hover:border-blue-500 hover:bg-blue-50 font-medium",
-    simple: "p-5 bg-white border-gray-200 hover:border-blue-500 hover:bg-blue-50 text-gray-800 font-medium",
-    social: "p-6 m-0 mb-3 bg-white border-gray-200 hover:border-blue-500 hover:bg-blue-50"
+    age: "p-8 text-center relative min-h-[140px] flex flex-col justify-center",
+    emoji: "p-6 text-center",
+    'emoji-full': "p-5 flex items-center text-gray-800",
+    grid: "p-6 text-center font-medium",
+    simple: "p-5 text-gray-800 font-medium text-base",
+    social: "p-8 text-center"
   };
+
+  const animationDelay = delay ? { animationDelay: `${delay}ms` } : {};
 
   return (
     <button
       onClick={handleClick}
-      className={`${baseClasses} ${variantClasses[variant]} ${className}`}
+      className={`${baseClasses} ${variantClasses[variant]} ${className} animate-slide-up`}
+      style={animationDelay}
     >
       {emoji && variant === 'emoji-full' && (
-        <img 
-          src={emoji} 
-          alt="" 
-          className="w-12 h-12 mr-4 flex-shrink-0"
-        />
+        <div className="w-12 h-12 mr-4 flex-shrink-0 flex items-center justify-center">
+          <img 
+            src={emoji} 
+            alt="" 
+            className="w-10 h-10 object-contain"
+          />
+        </div>
       )}
       {emoji && variant === 'emoji' && (
-        <img 
-          src={emoji} 
-          alt="" 
-          className="w-16 block mx-auto mb-4"
-        />
+        <div className="mb-4 flex justify-center">
+          <img 
+            src={emoji} 
+            alt="" 
+            className="w-16 h-16 object-contain"
+          />
+        </div>
       )}
       {image && variant === 'age' && (
-        <img 
-          src={image} 
-          alt="" 
-          className="w-32 block absolute bottom-0 left-1/2 transform -translate-x-1/2 z-10"
-        />
+        <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+          <img 
+            src={image} 
+            alt="" 
+            className="w-20 h-24 object-contain"
+          />
+        </div>
       )}
-      <span className={variant === 'emoji-full' ? 'flex-1' : ''}>{children}</span>
+      <span className={`${variant === 'emoji-full' ? 'flex-1' : ''} ${variant === 'age' ? 'text-lg font-semibold' : ''}`}>
+        {children}
+      </span>
     </button>
   );
 };

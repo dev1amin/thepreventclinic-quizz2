@@ -2,32 +2,67 @@ import { useEffect, useState } from 'react';
 
 const LoadingScreen = ({ onComplete }) => {
   const [isVisible, setIsVisible] = useState(true);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
+    // Animate progress bar
+    const progressInterval = setInterval(() => {
+      setProgress(prev => {
+        if (prev >= 100) {
+          clearInterval(progressInterval);
+          return 100;
+        }
+        return prev + 2;
+      });
+    }, 140); // 7 seconds total (100 / 2 * 140ms)
+
     const timer = setTimeout(() => {
       setIsVisible(false);
       if (onComplete) onComplete();
     }, 8000);
 
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer);
+      clearInterval(progressInterval);
+    };
   }, [onComplete]);
 
   if (!isVisible) return null;
 
   return (
-    <div className="fixed inset-0 bg-gray-200 z-50 flex items-center justify-center px-12">
-      <div className="text-center">
-        <div className="w-36 h-4 bg-gray-100 rounded-lg mx-auto mb-8 p-1">
-          <div className="h-3 bg-primary rounded-md w-0 animate-loading-bar animation-delay-500" />
+    <div className="fixed inset-0 bg-white z-50 flex items-center justify-center px-8">
+      <div className="text-center max-w-sm mx-auto">
+        {/* Logo */}
+        <div className="mb-12">
+          <img 
+            src="/images/zenfitlogo.jpg" 
+            alt="ZenFit" 
+            className="w-16 h-16 mx-auto rounded-full object-cover"
+          />
         </div>
-        <h2 className="text-base font-bold text-gray-800 mb-2">
-          Analisando...
+        
+        {/* Progress Bar */}
+        <div className="w-full bg-gray-200 rounded-full h-2 mb-8">
+          <div 
+            className="bg-primary h-2 rounded-full transition-all duration-200 ease-out"
+            style={{ width: `${progress}%` }}
+          />
+        </div>
+        
+        {/* Loading Text */}
+        <h2 className="text-xl font-bold text-gray-900 mb-3">
+          Analisando suas respostas...
         </h2>
-        <p className="text-sm text-gray-800">
-          Estamos analisando suas respostas<br />
+        <p className="text-gray-600 leading-relaxed">
+          Estamos processando suas informações<br />
           e preparando seu perfil<br />
-          hormonal...
+          hormonal personalizado
         </p>
+        
+        {/* Percentage */}
+        <div className="mt-6 text-sm text-primary font-semibold">
+          {progress}% completo
+        </div>
       </div>
     </div>
   );

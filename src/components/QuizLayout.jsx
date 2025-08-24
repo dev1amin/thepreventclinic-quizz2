@@ -5,18 +5,18 @@ const QuizLayout = ({ children, showProgress = true, currentStep = 0, totalSteps
   
   const getProgressWidth = () => {
     const progressMap = {
-      '/': 4.5454545454545,
-      '/social': 9.0909090909091,
-      '/question/1': 13.636363636364,
-      '/question/2': 18.181818181818,
-      '/question/3': 22.727272727273,
-      '/question/4': 27.272727272727,
-      '/question/5': 31.818181818182,
-      '/question/6': 36.363636363636,
-      '/question/7': 40.909090909091,
-      '/question/8': 45.454545454545,
-      '/analysis': 50,
-      '/final': 54.545454545455,
+      '/': 9,
+      '/social': 18,
+      '/question/1': 27,
+      '/question/2': 36,
+      '/question/3': 45,
+      '/question/4': 54,
+      '/question/5': 63,
+      '/question/6': 72,
+      '/question/7': 81,
+      '/question/8': 90,
+      '/analysis': 95,
+      '/final': 100,
     };
     
     return progressMap[location.pathname] || 0;
@@ -25,28 +25,38 @@ const QuizLayout = ({ children, showProgress = true, currentStep = 0, totalSteps
   return (
     <div className="min-h-screen bg-gray-50">
       {showProgress && (
-        <header className="px-6 pt-8 pb-4 bg-white shadow-sm">
-          <div className="max-w-lg mx-auto text-center">
-            <img 
-              src="/images/zenfitlogo.jpg" 
-              alt="ZenFit" 
-              className="w-20 mx-auto mb-6 block"
-            />
-            <div className="bg-gray-200 rounded-full p-1">
-              <div 
-                className="bg-blue-600 h-2 rounded-full transition-all duration-700 ease-out"
-                style={{ width: `${getProgressWidth()}%` }}
+        <header className="px-6 pt-12 pb-8 bg-white">
+          <div className="max-w-md mx-auto">
+            {/* Logo */}
+            <div className="text-center mb-8">
+              <img 
+                src="/images/zenfitlogo.jpg" 
+                alt="ZenFit" 
+                className="w-16 h-16 mx-auto rounded-full object-cover"
               />
+            </div>
+            
+            {/* Progress Bar */}
+            <div className="relative">
+              <div className="w-full bg-gray-200 rounded-full h-1">
+                <div 
+                  className="bg-primary h-1 rounded-full progress-bar"
+                  style={{ width: `${getProgressWidth()}%` }}
+                />
+              </div>
+              <div className="text-xs text-gray-500 mt-2 text-center">
+                {Math.round(getProgressWidth())}% completo
+              </div>
             </div>
           </div>
         </header>
       )}
       
-      <section className="px-6 pt-8 opacity-0 animate-appear animation-delay-250">
-        <div className="max-w-lg mx-auto">
+      <main className="px-6 pb-12">
+        <div className="max-w-md mx-auto animate-fade-in">
           {children}
         </div>
-      </section>
+      </main>
     </div>
   );
 };

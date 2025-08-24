@@ -14,57 +14,71 @@ const Final = () => {
 
   return (
     <QuizLayout currentStep={11}>
-      <h1 className="text-lg font-bold leading-tight tracking-tight mb-3">
-        Seu Protocolo Personalizado de 28 dias
-      </h1>
-      
-      <span className="block text-sm leading-relaxed mb-4">
-        De acordo com suas respostas, você pode recuperar energia, foco e libido em poucas semanas.
-      </span>
-      
-      <div className="block p-0 rounded-lg my-5">
-        <div className="flex">
-          <div className="w-full block px-3 my-3">
-            <div className="flex items-center justify-center">
-              <img src="/images/alert.webp" alt="" className="w-4 h-4 mr-2" />
-              <span className="block text-sm font-bold">ANTES</span>
+      <div className="bg-white rounded-3xl p-8 shadow-sm">
+        {/* Title */}
+        <h1 className="text-2xl font-bold leading-tight mb-4 text-gray-900">
+          Seu Protocolo Personalizado de 28 dias
+        </h1>
+        
+        {/* Subtitle */}
+        <p className="text-lg text-gray-600 mb-8 font-light">
+          De acordo com suas respostas, você pode recuperar energia, foco e libido em poucas semanas.
+        </p>
+        
+        {/* Before/After Section */}
+        <div className="mb-10">
+          {/* Headers */}
+          <div className="grid grid-cols-2 gap-4 mb-6">
+            <div className="text-center">
+              <div className="flex items-center justify-center mb-2">
+                <img src="/images/alert.webp" alt="" className="w-5 h-5 mr-2" />
+                <span className="font-bold text-gray-900">ANTES</span>
+              </div>
+            </div>
+            <div className="text-center">
+              <div className="flex items-center justify-center mb-2">
+                <img src="/images/icons/goal.webp" alt="" className="w-5 h-5 mr-2" />
+                <span className="font-bold text-gray-900">DEPOIS</span>
+              </div>
             </div>
           </div>
-          <div className="w-full block px-3 my-3">
-            <div className="flex items-center justify-center">
-              <img src="/images/icons/goal.webp" alt="" className="w-4 h-4 mr-2" />
-              <span className="block text-sm font-bold">DEPOIS</span>
+
+          {/* Images */}
+          <div className="bg-gray-50 rounded-2xl p-6">
+            <div className="grid grid-cols-2 gap-6">
+              <div className="text-center">
+                <img 
+                  src="/images/before-flt.png" 
+                  alt="Antes do protocolo" 
+                  className="w-full max-w-32 mx-auto object-contain"
+                />
+              </div>
+              <div className="text-center">
+                <img 
+                  src="/images/after-flt.png" 
+                  alt="Depois do protocolo" 
+                  className="w-full max-w-32 mx-auto object-contain"
+                />
+              </div>
             </div>
           </div>
         </div>
 
-        <div className="flex bg-white p-2">
-          <div className="w-full block px-2">
-            <img 
-              src="/images/before-flt.png" 
-              alt="Antes do protocolo" 
-              className="w-full max-w-48 block mx-auto"
-            />
-          </div>
-          <div className="w-full block px-2">
-            <img 
-              src="/images/after-flt.png" 
-              alt="Depois do protocolo" 
-              className="w-full max-w-48 block mx-auto"
-            />
-          </div>
-        </div>
+        {/* CTA Button */}
+        <a
+          href="https://pay.iexperience.com.br/f76010c2"
+          className={`w-full block text-center bg-primary hover:bg-primary-hover text-white font-semibold py-4 px-8 rounded-2xl transition-all duration-200 hover-lift no-underline ${
+            showButton ? 'opacity-100 animate-slide-up' : 'opacity-0'
+          }`}
+        >
+          Ver meu protocolo personalizado
+        </a>
+        
+        {/* Small text */}
+        <p className="text-xs text-gray-500 mt-6 text-center">
+          Protocolo baseado em suas respostas • Suporte especializado incluído
+        </p>
       </div>
-
-      <a
-        href="https://pay.iexperience.com.br/f76010c2"
-        className={`w-full block text-center font-bold text-sm py-4 no-underline rounded-lg transition-all duration-200 bg-primary text-white hover:bg-primary-hover ${
-          showButton ? 'opacity-100' : 'opacity-0'
-        }`}
-        style={{ animationDelay: '1s' }}
-      >
-        Ver meu protocolo
-      </a>
     </QuizLayout>
   );
 };
