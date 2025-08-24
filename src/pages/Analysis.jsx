@@ -36,15 +36,15 @@ const Analysis = () => {
 
     const chartsTimer = setTimeout(() => {
       setShowCharts(true);
-    }, 3500);
+    }, 2500);
 
     const noticeTimer = setTimeout(() => {
       setShowNotice(true);
-    }, 5500);
+    }, 3500);
 
     const buttonTimer = setTimeout(() => {
       setShowButton(true);
-    }, 6500);
+    }, 4000);
 
     return () => {
       clearTimeout(scoreTimer);
@@ -109,7 +109,6 @@ const Analysis = () => {
                 <br /><br />
                 Nosso protocolo de otimização hormonal + suporte com peptídeos está quase pronto para você.
               </p>
-              </div>
             </div>
 
             {/* Continue Button */}
