@@ -26,7 +26,7 @@ const QuizLayout = ({ children, showProgress = true, currentStep = 0, totalSteps
   return (
     <div className="min-h-screen bg-gray-50">
       {showProgress && (
-        <header className="px-6 pt-12 pb-8 bg-white">
+        <header className="px-6 pt-12 pb-8">
           <div className="max-w-md mx-auto">
             {/* Logo */}
             <div className="text-center mb-8">
