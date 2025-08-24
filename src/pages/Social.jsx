@@ -38,7 +38,7 @@ const Social = () => {
           <div className="mb-8">
             <div className="w-32 h-32 mx-auto rounded-full border-4 border-primary flex items-center justify-center mb-6">
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary">100k+</div>
+                <div className="text-3xl font-bold text-primary">1k+</div>
                 <div className="text-xs text-gray-600 font-medium">mulheres</div>
               </div>
             </div>
