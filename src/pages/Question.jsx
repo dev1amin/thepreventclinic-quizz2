@@ -18,75 +18,75 @@ const Question = () => {
       title: "O que mais está incomodando você hoje?",
       variant: "emoji",
       options: [
-        { text: "Cansaço constante", emoji: "../images/Semfolego.webp" },
-        { text: "Baixa libido", emoji: "../images/Triste2.png" },
-        { text: "Falta de foco / memória ruim", emoji: "../images/Estresse.png" },
-        { text: "Ganho de peso sem explicação", emoji: "../images/Balança.png" }
+        { text: "Cansaço constante", emoji: "/images/Semfolego.webp" },
+        { text: "Baixa libido", emoji: "/images/Triste2.png" },
+        { text: "Falta de foco / memória ruim", emoji: "/images/Estresse.png" },
+        { text: "Ganho de peso sem explicação", emoji: "/images/Balança.png" }
       ]
     },
     2: {
       title: "Como você se sente ao longo do dia?",
       variant: "emoji",
       options: [
-        { text: "Sempre cansada, sem energia", emoji: "../images/Semfolego.webp" },
-        { text: "Cansada, mas consigo funcionar", emoji: "../images/Quasesemfolego.webp" },
-        { text: "Normal, energia ok", emoji: "../images/q10o3.png" },
-        { text: "Com energia o dia todo", emoji: "../images/Deboa.webp" }
+        { text: "Sempre cansada, sem energia", emoji: "/images/Semfolego.webp" },
+        { text: "Cansada, mas consigo funcionar", emoji: "/images/Quasesemfolego.webp" },
+        { text: "Normal, energia ok", emoji: "/images/q10o3.png" },
+        { text: "Com energia o dia todo", emoji: "/images/Deboa.webp" }
       ]
     },
     3: {
       title: "Quantas horas por noite você costuma dormir?",
       variant: "grid",
       options: ["Menos de 5h", "5-6h", "7-8h", "Mais de 8h"],
-      image: "../images/Dormindo.webp"
+      image: "/images/Dormindo.webp"
     },
     4: {
       title: "Quando foi a última vez que você se sentiu realmente cheia de energia?",
       variant: "emoji",
       options: [
-        { text: "Menos de 1 ano atrás", emoji: "../images/Deboa.webp" },
-        { text: "1-2 anos atrás", emoji: "../images/q10o3.png" },
-        { text: "Mais de 3 anos atrás", emoji: "../images/Quasesemfolego.webp" },
-        { text: "Nem lembro mais", emoji: "../images/Semfolego.webp" }
+        { text: "Menos de 1 ano atrás", emoji: "/images/Deboa.webp" },
+        { text: "1-2 anos atrás", emoji: "/images/q10o3.png" },
+        { text: "Mais de 3 anos atrás", emoji: "/images/Quasesemfolego.webp" },
+        { text: "Nem lembro mais", emoji: "/images/Semfolego.webp" }
       ]
     },
     5: {
       title: "Como está sua libido hoje?",
       variant: "emoji",
       options: [
-        { text: "Quase inexistente", emoji: "../images/Triste2.png" },
-        { text: "Mais baixa que antes", emoji: "../images/Quasesemfolego.webp" },
-        { text: "Normal", emoji: "../images/q10o3.png" },
-        { text: "Alta", emoji: "../images/Deboa.webp" }
+        { text: "Quase inexistente", emoji: "/images/Triste2.png" },
+        { text: "Mais baixa que antes", emoji: "/images/Quasesemfolego.webp" },
+        { text: "Normal", emoji: "/images/q10o3.png" },
+        { text: "Alta", emoji: "/images/Deboa.webp" }
       ]
     },
     6: {
       title: "O quanto você depende de café ou energéticos para funcionar?",
       variant: "emoji",
       options: [
-        { text: "3+ cafés por dia", emoji: "../images/Cafe.png" },
-        { text: "1-2 cafés por dia", emoji: "../images/2compos.png" },
-        { text: "Pouco / raramente", emoji: "../images/5copos.png" },
-        { text: "Nada, não preciso", emoji: "../images/6copos.png" }
+        { text: "3+ cafés por dia", emoji: "/images/Cafe.png" },
+        { text: "1-2 cafés por dia", emoji: "/images/2compos.png" },
+        { text: "Pouco / raramente", emoji: "/images/5copos.png" },
+        { text: "Nada, não preciso", emoji: "/images/6copos.png" }
       ]
     },
     7: {
       title: "Você já checou seus hormônios ou vitaminas recentemente?",
       variant: "emoji",
       options: [
-        { text: "Sim, recentemente", emoji: "../images/safe.webp" },
-        { text: "Há alguns anos", emoji: "../images/icons/clock.webp" },
-        { text: "Nunca", emoji: "../images/alert.webp" }
+        { text: "Sim, recentemente", emoji: "/images/safe.webp" },
+        { text: "Há alguns anos", emoji: "/images/icons/clock.webp" },
+        { text: "Nunca", emoji: "/images/alert.webp" }
       ]
     },
     8: {
       title: "Você perde o fôlego ao subir as escadas?",
       variant: "emoji",
       options: [
-        { text: "Fico tao sem fôlego que nem consigo falar", emoji: "../images/Semfolego.webp" },
-        { text: "Fico um pouco sem fôlego, mas consigo falar", emoji: "../images/Quasesemfolego.webp" },
-        { text: "Me sinto Ok depois de subir as escadas", emoji: "../images/q10o3.png" },
-        { text: "Me sinto super bem, posso subir vários lances", emoji: "../images/Deboa.webp" }
+        { text: "Fico tao sem fôlego que nem consigo falar", emoji: "/images/Semfolego.webp" },
+        { text: "Fico um pouco sem fôlego, mas consigo falar", emoji: "/images/Quasesemfolego.webp" },
+        { text: "Me sinto Ok depois de subir as escadas", emoji: "/images/q10o3.png" },
+        { text: "Me sinto super bem, posso subir vários lances", emoji: "/images/Deboa.webp" }
       ]
     }
   };

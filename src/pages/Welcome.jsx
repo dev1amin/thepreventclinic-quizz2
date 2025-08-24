@@ -5,7 +5,7 @@ const Welcome = () => {
   return (
     <QuizLayout showProgress={false}>
       <img 
-        src="../images/zenfitlogo.jpg" 
+        src="/images/zenfitlogo.jpg" 
         alt="ZenFit" 
         className="w-20 mx-auto mb-5 block"
       />
@@ -23,14 +23,14 @@ const Welcome = () => {
           <OptionButton 
             variant="age"
             to="/social"
-            image="../images/mulher_18anos_modelo2.webp"
+            image="/images/mulher_18anos_modelo2.webp"
           >
             18 a 29
           </OptionButton>
           <OptionButton 
             variant="age"
             to="/social"
-            image="../images/mulher_30anos_modelo2.webp"
+            image="/images/mulher_30anos_modelo2.webp"
           >
             30 a 39
           </OptionButton>
@@ -40,14 +40,14 @@ const Welcome = () => {
           <OptionButton 
             variant="age"
             to="/social"
-            image="../images/mulher_40anos_modelo2.webp"
+            image="/images/mulher_40anos_modelo2.webp"
           >
             40 a 49
           </OptionButton>
           <OptionButton 
             variant="age"
             to="/social"
-            image="../images/mulher_50anos_modelo2.webp"
+            image="/images/mulher_50anos_modelo2.webp"
           >
             50 ou mais
           </OptionButton>

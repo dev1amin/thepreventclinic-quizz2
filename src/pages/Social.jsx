@@ -18,7 +18,7 @@ const Social = () => {
       <section className="px-8 pt-8 opacity-0 animate-appear animation-delay-250">
         <div className="max-w-md mx-auto text-center">
           <img 
-            src="../images/zenfitlogo.jpg" 
+            src="/images/zenfitlogo.jpg" 
             alt="ZenFit" 
             className="w-20 mx-auto mb-5 block"
           />
@@ -34,7 +34,7 @@ const Social = () => {
           <div className="block">
             <div className="w-full block mb-2">
               <img 
-                src="../images/Continuar.jpg" 
+                src="/images/Continuar.jpg" 
                 alt="Mais de 100 mil mulheres" 
                 className="mx-auto max-w-full"
               />
