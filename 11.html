@@ -1,0 +1,146 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- META TAGS -->
+
+<meta charset="UTF-8">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>ZenFit</title>
+
+<!-- LINKS -->
+
+<link rel="stylesheet" href="scripts/styles.css">
+<link rel="shortcut icon" href="images/fav.png">
+
+<!-- STYLES -->
+
+<style>
+
+* {
+    color: #111111;
+}
+
+body {
+    background: #FFFFFF;
+}
+
+.logo {
+    width: 90px;
+}
+
+.progress {
+    background: #C85A7B;
+}
+
+.bar {
+    background: #F5F5F5;
+}
+
+.option {
+    color: #111111;
+    background: #EEEEEE;
+}
+
+.option:hover {
+    color: #F5F5F5;
+    background: #FF769F;
+}
+
+.loading {
+    background: #EEEEEE;
+}
+
+.loading-title, .loading-text {
+    color: #111111;
+}
+
+.loading-bar-progress {
+    background: #C85A7B;
+    animation: loading-bar 7s ease-in;
+    animation-fill-mode: forwards;
+    animation-delay: 500ms;
+}
+
+.loading-bar {
+    background: #F5F5F5;
+}
+
+.continue {
+    animation: appear 500ms ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 11s;
+    background: #C85A7B;
+    color: #FFFFFF;
+}
+
+.continue:hover {
+    background: #FF769F;
+    color: #FFFFFF;
+}
+
+@keyframes progress {
+    0%      {width: 50%;}
+    100%    {width: 54.545454545455%;}
+}
+
+</style>
+
+</head> 
+<body>
+
+
+<header>
+  <div class="content center">
+
+    <img class="logo" src="images/zenfitlogo.jpg" alt="ZenFit" />
+
+    <div class="bar">
+        <div class="progress"></div>
+    </div>
+
+  </div>
+</header>
+
+
+<section>
+  <div class="content center">
+
+	<h1>Seu Protocolo Personalizado de 28 dias</h1>	<span class="description">De acordo com suas respostas, você pode recuperar energia, foco e libido em poucas semanas.</span>
+	
+	<div class="checkout-display">
+        <div class="checkout-flex">
+            <div class="checkout-left">
+                <span class="checkout-title">ANTES</span>
+            </div>
+
+            <div class="checkout-right">
+                <span class="checkout-title">DEPOIS</span>
+            </div>
+        </div>
+
+        <div class="checkout-transform">
+            <div class="checkout-left">
+                <img class="checkout-image" src="images/before-flt.png" alt="Antes do protocolo" />                                                            </div>
+
+            <div class="checkout-right">
+                <img class="checkout-image" src="images/after-flt.png" alt="Depois do protocolo" />                                                                
+            </div>
+        </div>
+    </div>
+
+    <a class="continue" style="animation-delay: 1s;" href="https://pay.iexperience.com.br/f76010c2">Ver meu protocolo</a>
+
+  </div>
+</section>
+
+
+</body>
+</html>
