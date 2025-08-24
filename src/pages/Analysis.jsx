@@ -61,7 +61,7 @@ const Analysis = () => {
                   </div>
                   <div className="bg-white p-2 rounded-lg ml-1">
                     <img 
-                      src="./images/mulher_30anos_modelo2.webp" 
+                      src="../images/mulher_30anos_modelo2.webp" 
                       alt="Análise inicial do seu perfil" 
                       className="max-w-32 mx-auto"
                     />
@@ -77,7 +77,7 @@ const Analysis = () => {
                     </div>
                   </div>
                   <div className="flex flex-col items-center mt-2">
-                    <img src="./images/fire.png" alt="" className="w-4 h-4 mb-1" />
+                    <img src="../images/fire.png" alt="" className="w-4 h-4 mb-1" />
                     <span className="text-xs font-bold">ENERGIA</span>
                   </div>
                 </div>
@@ -89,7 +89,7 @@ const Analysis = () => {
                     </div>
                   </div>
                   <div className="flex flex-col items-center mt-2">
-                    <img src="./images/Triste2.png" alt="" className="w-4 h-4 mb-1" />
+                    <img src="../images/Triste2.png" alt="" className="w-4 h-4 mb-1" />
                     <span className="text-xs font-bold">LIBIDO</span>
                   </div>
                 </div>
@@ -101,7 +101,7 @@ const Analysis = () => {
                     </div>
                   </div>
                   <div className="flex flex-col items-center mt-2">
-                    <img src="./images/Estresse.png" alt="" className="w-4 h-4 mb-1" />
+                    <img src="../images/Estresse.png" alt="" className="w-4 h-4 mb-1" />
                     <span className="text-xs font-bold text-center">CLAREZA MENTAL</span>
                   </div>
                 </div>
@@ -113,7 +113,7 @@ const Analysis = () => {
                     </div>
                   </div>
                   <div className="flex flex-col items-center mt-2">
-                    <img src="./images/icons/timer.webp" alt="" className="w-4 h-4 mb-1" />
+                    <img src="../images/icons/timer.webp" alt="" className="w-4 h-4 mb-1" />
                     <span className="text-xs font-bold text-center">RECUPERAÇÃO</span>
                   </div>
                 </div>
@@ -121,7 +121,7 @@ const Analysis = () => {
 
               <div className={`bg-gradient-to-r from-primary-hover to-primary-hover p-4 rounded-lg mb-4 ${showNotice ? 'opacity-100' : 'opacity-0'} transition-opacity duration-500`}>
                 <div className="flex items-start">
-                  <img src="./images/right.png" alt="" className="w-4 mr-2 mt-0.5" />
+                  <img src="../images/right.png" alt="" className="w-4 mr-2 mt-0.5" />
                   <div className="text-left">
                     <span className="text-sm font-bold text-gray-800 block mb-1">
                       Protocolo de otimização hormonal quase pronto!
