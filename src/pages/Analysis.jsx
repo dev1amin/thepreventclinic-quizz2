@@ -80,7 +80,7 @@ const Analysis = () => {
                 </div>
                 
                 <div className={`transition-all duration-1000 ${showScore ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
-                  <CircleProgress value={scores.overall / 100} size={140} delay={500} showLabel={false} />
+                  <CircleProgress value={scores.overall / 100} size={140} showLabel={false} />
                 </div>
               </div>
 
