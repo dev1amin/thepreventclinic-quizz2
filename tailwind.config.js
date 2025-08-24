@@ -7,17 +7,19 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#C85A7B',
-        'primary-hover': '#FF769F',
-        'primary-light': '#FFE6EE',
+        primary: '#2563eb',
+        'primary-hover': '#1d4ed8',
+        'primary-light': '#dbeafe',
         gray: {
-          100: '#F5F5F5',
-          200: '#EEEEEE',
-          800: '#111111',
+          50: '#f9fafb',
+          100: '#f3f4f6',
+          200: '#e5e7eb',
+          800: '#1f2937',
+          900: '#111827',
         }
       },
       fontFamily: {
-        'poppins': ['Poppins', 'sans-serif'],
+        'sans': ['Inter', 'system-ui', 'sans-serif'],
       },
       animation: {
         'appear': 'appear 500ms ease-in forwards',

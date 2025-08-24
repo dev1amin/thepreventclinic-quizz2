@@ -4,22 +4,22 @@ import OptionButton from '../components/OptionButton';
 const Welcome = () => {
   return (
     <QuizLayout showProgress={false}>
-      <img 
-        src="/images/zenfitlogo.jpg" 
-        alt="ZenFit" 
-        className="w-20 mx-auto mb-5 block"
-      />
-      
-      <h1 className="text-lg font-bold leading-tight tracking-tight mb-3">
-        TESTE DE ENERGIA FEMININA
-      </h1>
-      
-      <span className="block text-sm leading-relaxed mb-4">
-        DESCUBRA A CAUSA DO SEU CANSAÇO
-      </span>
-      
-      <div className="mt-5">
-        <div className="flex mb-0">
+      <div className="text-center bg-white rounded-2xl p-8 shadow-sm">
+        <img 
+          src="/images/zenfitlogo.jpg" 
+          alt="ZenFit" 
+          className="w-24 mx-auto mb-6 block"
+        />
+        
+        <h1 className="text-3xl font-bold leading-tight mb-4 text-gray-900">
+          TESTE DE ENERGIA FEMININA
+        </h1>
+        
+        <p className="text-lg text-gray-600 mb-8">
+          DESCUBRA A CAUSA DO SEU CANSAÇO
+        </p>
+        
+        <div className="grid grid-cols-2 gap-4">
           <OptionButton 
             variant="age"
             to="/social"
@@ -34,9 +34,6 @@ const Welcome = () => {
           >
             30 a 39
           </OptionButton>
-        </div>
-        
-        <div className="flex">
           <OptionButton 
             variant="age"
             to="/social"

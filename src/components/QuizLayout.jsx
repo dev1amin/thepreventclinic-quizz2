@@ -23,18 +23,18 @@ const QuizLayout = ({ children, showProgress = true, currentStep = 0, totalSteps
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-50">
       {showProgress && (
-        <header className="px-8 pt-8 pb-2 md:px-4 md:pt-6">
-          <div className="max-w-md mx-auto text-center">
+        <header className="px-6 pt-8 pb-4 bg-white shadow-sm">
+          <div className="max-w-lg mx-auto text-center">
             <img 
               src="/images/zenfitlogo.jpg" 
               alt="ZenFit" 
-              className="w-20 mx-auto mb-5 block"
+              className="w-20 mx-auto mb-6 block"
             />
-            <div className="bg-gray-100 rounded-md p-1">
+            <div className="bg-gray-200 rounded-full p-1">
               <div 
-                className="bg-primary h-3 rounded-sm transition-all duration-700 ease-out"
+                className="bg-blue-600 h-2 rounded-full transition-all duration-700 ease-out"
                 style={{ width: `${getProgressWidth()}%` }}
               />
             </div>
@@ -42,8 +42,8 @@ const QuizLayout = ({ children, showProgress = true, currentStep = 0, totalSteps
         </header>
       )}
       
-      <section className="px-8 pt-8 opacity-0 animate-appear animation-delay-250 md:px-4">
-        <div className="max-w-md mx-auto text-center">
+      <section className="px-6 pt-8 opacity-0 animate-appear animation-delay-250">
+        <div className="max-w-lg mx-auto">
           {children}
         </div>
       </section>

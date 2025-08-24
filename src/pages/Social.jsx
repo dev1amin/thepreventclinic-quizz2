@@ -14,46 +14,43 @@ const Social = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white">
-      <section className="px-8 pt-8 opacity-0 animate-appear animation-delay-250">
-        <div className="max-w-md mx-auto text-center">
-          <img 
-            src="/images/zenfitlogo.jpg" 
-            alt="ZenFit" 
-            className="w-20 mx-auto mb-5 block"
-          />
-          
-          <h1 className="text-lg font-bold leading-tight tracking-tight mb-3">
-            Mais de 100 mil mulheres
-          </h1>
-          
-          <span className="block text-sm leading-relaxed mb-4">
-            já descobriram a causa do cansaço com este teste
-          </span>
-          
-          <div className="block">
-            <div className="w-full block mb-2">
+    <div className="min-h-screen bg-gray-50">
+      <section className="px-6 pt-8 opacity-0 animate-appear animation-delay-250">
+        <div className="max-w-lg mx-auto text-center">
+          <div className="bg-white rounded-2xl p-8 shadow-sm">
+            <img 
+              src="/images/zenfitlogo.jpg" 
+              alt="ZenFit" 
+              className="w-24 mx-auto mb-6 block"
+            />
+            
+            <h1 className="text-2xl font-bold leading-tight mb-4 text-gray-900">
+              Mais de 100 mil mulheres
+            </h1>
+            
+            <p className="text-lg text-gray-600 mb-6">
+              já descobriram a causa do cansaço com este teste
+            </p>
+            
+            <div className="mb-8">
               <img 
                 src="/images/Continuar.jpg" 
                 alt="Mais de 100 mil mulheres" 
-                className="mx-auto max-w-full"
+                className="mx-auto max-w-full rounded-xl"
               />
             </div>
+
+            <button
+              onClick={() => navigate('/question/1')}
+              className={`w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-xl transition-all duration-200 ${
+                showButton ? 'opacity-100' : 'opacity-0'
+              }`}
+            >
+              Continuar
+            </button>
           </div>
         </div>
       </section>
-
-      <div className="fixed bottom-0 w-full">
-        <button
-          onClick={() => navigate('/question/1')}
-          className={`w-auto mx-4 mb-4 block text-center font-bold text-sm py-4 px-6 no-underline rounded-lg transition-all duration-200 bg-primary text-white hover:bg-primary-hover ${
-            showButton ? 'opacity-100' : 'opacity-0'
-          }`}
-          style={{ animationDelay: '500ms' }}
-        >
-          Continuar
-        </button>
-      </div>
     </div>
   );
 };
