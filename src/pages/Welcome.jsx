@@ -4,7 +4,7 @@ import OptionButton from '../components/OptionButton';
 const Welcome = () => {
   return (
     <QuizLayout showProgress={false}>
-      <div className="text-center bg-white rounded-3xl p-10 shadow-sm animate-scale-in">
+      <div className="text-center rounded-3xl p-10 shadow-sm animate-scale-in">
         {/* Logo */}
         <div className="mb-8">
           <div className="flex items-center justify-center mb-2">
