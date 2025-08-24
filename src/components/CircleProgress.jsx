@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-const CircleProgress = ({ value = 0.63, size = 120, delay = 9000 }) => {
+const CircleProgress = ({ value = 0.44, size = 140, delay = 2000, showLabel = true }) => {
   const canvasRef = useRef(null);
   const animationRef = useRef(null);
 
@@ -11,7 +11,7 @@ const CircleProgress = ({ value = 0.63, size = 120, delay = 9000 }) => {
     const ctx = canvas.getContext('2d');
     const centerX = size / 2;
     const centerY = size / 2;
-    const radius = size / 2 - 10;
+    const radius = size / 2 - 12;
 
     // Set canvas size
     canvas.width = size;
@@ -41,20 +41,20 @@ const CircleProgress = ({ value = 0.63, size = 120, delay = 9000 }) => {
       ctx.beginPath();
       ctx.arc(centerX, centerY, radius, 0, 2 * Math.PI);
       ctx.strokeStyle = '#f0f0f0';
-      ctx.lineWidth = 16;
+      ctx.lineWidth = 12;
       ctx.stroke();
 
       // Draw progress arc
       ctx.beginPath();
       ctx.arc(centerX, centerY, radius, -Math.PI / 2, -Math.PI / 2 + (2 * Math.PI * currentValue));
-      ctx.strokeStyle = '#0f9b4a';
-      ctx.lineWidth = 16;
+      ctx.strokeStyle = '#10b981'; // Green color
+      ctx.lineWidth = 12;
       ctx.lineCap = 'round';
       ctx.stroke();
 
       // Draw percentage text
-      ctx.fillStyle = '#2b3033';
-      ctx.font = 'bold 28px Poppins';
+      ctx.fillStyle = '#1f2937';
+      ctx.font = 'bold 32px Inter';
       ctx.textAlign = 'center';
       ctx.textBaseline = 'middle';
       ctx.fillText(`${Math.round(currentValue * 100)}%`, centerX, centerY);
@@ -79,13 +79,15 @@ const CircleProgress = ({ value = 0.63, size = 120, delay = 9000 }) => {
   }, [value, size, delay]);
 
   return (
-    <div className="relative">
+    <div className="relative flex flex-col items-center">
       <canvas ref={canvasRef} className="block" />
-      <div className="absolute inset-0 flex items-center justify-center">
-        <span className="text-xs font-bold text-center block mt-16">
-          SUA PONTUAÇÃO GERAL:
-        </span>
-      </div>
+      {showLabel && (
+        <div className="absolute -bottom-6">
+          <span className="text-xs font-semibold text-gray-600 uppercase tracking-wide">
+            SUA PONTUAÇÃO:
+          </span>
+        </div>
+      )}
     </div>
   );
 };
