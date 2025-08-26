@@ -4,10 +4,10 @@ const BarChart = ({ data, delay = 0 }) => {
   const [animated, setAnimated] = useState(false);
 
   const labels = {
-    'energia': 'ENERGIA',
+    'energia': 'ENERGY',
     'libido': 'LIBIDO', 
-    'clareza': 'CLAREZA MENTAL',
-    'recuperacao': 'RECUPERAÇÃO'
+    'clareza': 'MENTAL CLARITY',
+    'recuperacao': 'RECOVERY'
   };
 
   const getIcon = (key) => {

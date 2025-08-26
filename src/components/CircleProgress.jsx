@@ -60,7 +60,7 @@ const CircleProgress = ({ value = 0.78, size = 140, delay = 1000, showLabel = tr
       // Draw "PONTUAÇÃO" text
       ctx.fillStyle = '#737373';
       ctx.font = '500 11px Inter, system-ui, sans-serif';
-      ctx.fillText('PONTUAÇÃO', centerX, centerY + 25);
+      ctx.fillText('SCORE', centerX, centerY + 25);
 
       if (progress < 1) {
         animationRef.current = requestAnimationFrame(animate);

@@ -15,82 +15,82 @@ const Question = () => {
 
   const questions = {
     1: {
-      title: "O que mais está incomodando você hoje?",
+      title: "What is bothering you most today?",
       variant: "simple",
       options: [
-        "Cansaço constante",
-        "Baixa libido",
-        "Falta de foco / memória ruim",
-        "Ganho de peso sem explicação"
+        "Constant fatigue",
+        "Low libido",
+        "Lack of focus / poor memory",
+        "Unexplained weight gain"
       ]
     },
     2: {
-      title: "Como você se sente ao longo do dia?",
+      title: "How do you feel throughout the day?",
       variant: "emoji-full",
       options: [
-        { text: "Sempre cansada, sem energia", emoji: "/images/fire.png" },
-        { text: "Cansada, mas consigo funcionar", emoji: "/images/Quasesemfolego.webp" },
-        { text: "Normal, energia ok", emoji: "/images/q10o3.png" },
-        { text: "Com energia o dia todo", emoji: "/images/Deboa.webp" }
+        { text: "Always tired, no energy", emoji: "/images/fire.png" },
+        { text: "Tired, but I can function", emoji: "/images/Quasesemfolego.webp" },
+        { text: "Normal, energy is ok", emoji: "/images/q10o3.png" },
+        { text: "Energetic all day", emoji: "/images/Deboa.webp" }
       ]
     },
     3: {
-      title: "Quantas horas por noite você costuma dormir?",
+      title: "How many hours per night do you usually sleep?",
       variant: "emoji-full",
       options: [
-        { text: "Menos de 5h", emoji: "/images/Nivel2.png" },
+        { text: "Less than 5h", emoji: "/images/Nivel2.png" },
         { text: "5-6h", emoji: "/images/Nivel3.png" },
         { text: "7-8h", emoji: "/images/Nivel14.png" },
-        { text: "Mais de 8h", emoji: "/images/Nivel5.png" }
+        { text: "More than 8h", emoji: "/images/Nivel5.png" }
       ]
     },
     4: {
-      title: "Quando foi a última vez que você se sentiu realmente cheia de energia?",
+      title: "When was the last time you felt really full of energy?",
       variant: "simple",
       options: [
-        "Menos de 1 ano atrás",
-        "1-2 anos atrás",
-        "Mais de 3 anos atrás",
-        "Nem lembro mais"
+        "Less than 1 year ago",
+        "1-2 years ago",
+        "More than 3 years ago",
+        "I don't remember anymore"
       ]
     },
     5: {
-      title: "Como está sua libido hoje?",
+      title: "How is your libido today?",
       variant: "simple",
       options: [
-        "Quase inexistente",
-        "Mais baixa que antes",
+        "Almost non-existent",
+        "Lower than before",
         "Normal",
-        "Alta"
+        "High"
       ]
     },
     6: {
-      title: "O quanto você depende de café ou energéticos para funcionar?",
+      title: "How much do you depend on coffee or energy drinks to function?",
       variant: "emoji-full",
       options: [
-        { text: "3+ cafés por dia", emoji: "/images/Cafe.png" },
-        { text: "1-2 cafés por dia", emoji: "/images/5copos.png" },
-        { text: "Pouco / raramente", emoji: "/images/2compos.png" },
-        { text: "Nada, não preciso", emoji: "/images/6copos.png" }
+        { text: "3+ coffees per day", emoji: "/images/Cafe.png" },
+        { text: "1-2 coffees per day", emoji: "/images/5copos.png" },
+        { text: "Little / rarely", emoji: "/images/2compos.png" },
+        { text: "Nothing, I don't need it", emoji: "/images/6copos.png" }
       ]
     },
     7: {
-      title: "Você já checou seus hormônios ou vitaminas recentemente?",
+      title: "Have you checked your hormones or vitamins recently?",
       variant: "emoji-full",
       options: [
-        { text: "Sim, recentemente", emoji: "/images/q12o1.png" },
-        { text: "Há alguns anos", emoji: "/images/q5o2.png" },
-        { text: "Nunca", emoji: "/images/Triste2.png" }
+        { text: "Yes, recently", emoji: "/images/q12o1.png" },
+        { text: "A few years ago", emoji: "/images/q5o2.png" },
+        { text: "Never", emoji: "/images/Triste2.png" }
       ]
     },
     8: {
-      title: "Você perde o fôlego ao subir as escadas?",
+      title: "Do you get out of breath when climbing stairs?",
       variant: "simple",
       options: [
-        "Fico tão sem fôlego que nem consigo falar",
-        "Fico um pouco sem fôlego, mas consigo falar",
-        "Me sinto Ok depois de subir as escadas",
-        "Me sinto super bem, posso subir vários lances"
+        "I get so out of breath I can't even speak",
+        "I get a little out of breath, but I can speak",
+        "I feel OK after climbing stairs",
+        "I feel great, I can climb several flights"
       ]
     }
   };
@@ -141,7 +141,7 @@ const Question = () => {
       <div className="rounded-3xl p-8 shadow-sm">
         {/* Question Number */}
         <div className="text-sm text-primary font-semibold mb-4">
-          Pergunta {questionId} de 8
+          Question {questionId} of 8
         </div>
         
         {/* Question Title */}

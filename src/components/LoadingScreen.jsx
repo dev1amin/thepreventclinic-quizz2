@@ -47,17 +47,17 @@ const LoadingScreen = ({ onComplete }) => {
         
         {/* Loading Text */}
         <h2 className="text-xl font-bold text-gray-900 mb-3">
-          Analisando suas respostas...
+          Analyzing your answers...
         </h2>
         <p className="text-gray-600 leading-relaxed">
-          Estamos processando suas informações<br />
-          e preparando seu perfil<br />
-          hormonal personalizado
+          We are processing your information<br />
+          and preparing your personalized<br />
+          hormonal profile
         </p>
         
         {/* Percentage */}
         <div className="mt-6 text-sm text-primary font-semibold">
-          {progress}% completo
+          {progress}% complete
         </div>
       </div>
     </div>

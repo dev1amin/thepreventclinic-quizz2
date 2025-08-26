@@ -17,12 +17,12 @@ const Final = () => {
       <div className="rounded-3xl p-8 shadow-sm">
         {/* Title */}
         <h1 className="text-2xl font-bold leading-tight mb-4 text-gray-900">
-          Seu Protocolo Personalizado de 28 dias
+          Your 28-Day Personalized Protocol
         </h1>
         
         {/* Subtitle */}
         <p className="text-lg text-gray-600 mb-8 font-light">
-          De acordo com suas respostas, você pode recuperar energia, foco e libido em poucas semanas.
+          According to your answers, you can recover energy, focus and libido in just a few weeks.
         </p>
         
         {/* Before/After Section */}
@@ -32,13 +32,13 @@ const Final = () => {
             <div className="text-center">
               <div className="flex items-center justify-center mb-2">
                 <img src="/images/alert.webp" alt="" className="w-5 h-5 mr-2" />
-                <span className="font-bold text-gray-900">ANTES</span>
+                <span className="font-bold text-gray-900">BEFORE</span>
               </div>
             </div>
             <div className="text-center">
               <div className="flex items-center justify-center mb-2">
                 <img src="/images/icons/goal.webp" alt="" className="w-5 h-5 mr-2" />
-                <span className="font-bold text-gray-900">DEPOIS</span>
+                <span className="font-bold text-gray-900">AFTER</span>
               </div>
             </div>
           </div>
@@ -49,14 +49,14 @@ const Final = () => {
               <div className="text-center">
                 <img 
                   src="/images/before-flt.png" 
-                  alt="Antes do protocolo" 
+                  alt="Before protocol" 
                   className="w-full max-w-32 mx-auto object-contain"
                 />
               </div>
               <div className="text-center">
                 <img 
                   src="/images/after-flt.png" 
-                  alt="Depois do protocolo" 
+                  alt="After protocol" 
                   className="w-full max-w-32 mx-auto object-contain"
                 />
               </div>
@@ -71,12 +71,12 @@ const Final = () => {
             showButton ? 'opacity-100 animate-slide-up' : 'opacity-0'
           }`}
         >
-          Ver meu protocolo personalizado
+          See my personalized protocol
         </a>
         
         {/* Small text */}
         <p className="text-xs text-gray-500 mt-6 text-center">
-          Protocolo baseado em suas respostas • Suporte especializado incluído
+          Protocol based on your answers • Specialized support included
         </p>
       </div>
     </QuizLayout>

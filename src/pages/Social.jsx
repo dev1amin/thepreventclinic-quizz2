@@ -46,12 +46,12 @@ const Social = () => {
           
           {/* Title */}
           <h1 className="text-2xl font-bold leading-tight mb-4 text-gray-900">
-            Todas as mulheres da nossa comunidade
+            All women in our community
           </h1>
           
           {/* Subtitle */}
           <p className="text-lg text-gray-600 mb-8 font-light">
-            já descobriram a causa do cansaço com este teste
+            have already discovered the cause of fatigue with this test
           </p>
 
           {/* Continue Button */}
@@ -61,12 +61,12 @@ const Social = () => {
               showButton ? 'opacity-100 animate-slide-up' : 'opacity-0'
             }`}
           >
-            Começar teste
+            Start test
           </button>
           
           {/* Small text */}
           <p className="text-xs text-gray-500 mt-6">
-            Teste gratuito • 2 minutos • Resultados personalizados
+            Free test • 2 minutes • Personalized results
           </p>
         </div>
       </div>

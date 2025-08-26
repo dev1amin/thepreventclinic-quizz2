@@ -32,18 +32,18 @@ const Welcome = () => {
         
         {/* Title */}
         <h1 className="text-3xl font-bold leading-tight mb-3 text-gray-900">
-          Teste de Energia Feminina
+          Female Energy Test
         </h1>
         
         {/* Subtitle */}
         <p className="text-lg text-gray-600 mb-10 font-light">
-          Descubra a causa do seu cansaço
+          Discover the cause of your fatigue
         </p>
         
         {/* Age Selection - Layout como na imagem */}
         <div className="space-y-4">
           <p className="text-sm text-gray-500 mb-6 font-medium">
-            Selecione sua faixa etária para começar:
+            Select your age range to start:
           </p>
           
           <div className="grid grid-cols-2 gap-4">
@@ -55,12 +55,12 @@ const Welcome = () => {
               <div className="relative h-[11rem] bg-gray-100 rounded-xl overflow-hidden">
                 <img 
                   src="/images/mulher_18anos_modelo2.webp" 
-                  alt="18 a 29" 
+                  alt="18 to 29" 
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-[rgb(184,84,80)] bg-opacity-20"></div>
                 <div className="absolute bottom-3 left-3 text-white font-bold text-lg">
-                  18 a 29
+                  18 to 29
                 </div>
               </div>
             </OptionButton>
@@ -72,12 +72,12 @@ const Welcome = () => {
               <div className="relative h-[11rem] bg-gray-100 rounded-xl overflow-hidden">
                 <img 
                   src="/images/mulher_30anos_modelo2.webp" 
-                  alt="30 a 39" 
+                  alt="30 to 39" 
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-[rgb(184,84,80)] bg-opacity-20"></div>
                 <div className="absolute bottom-3 left-3 text-white font-bold text-lg">
-                  30 a 39
+                  30 to 39
                 </div>
               </div>
             </OptionButton>
@@ -89,12 +89,12 @@ const Welcome = () => {
               <div className="relative h-[11rem] bg-gray-100 rounded-xl overflow-hidden">
                 <img 
                   src="/images/mulher_40anos_modelo2.webp" 
-                  alt="40 a 49" 
+                  alt="40 to 49" 
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-[rgb(184,84,80)] bg-opacity-20"></div>
                 <div className="absolute bottom-3 left-3 text-white font-bold text-lg">
-                  40 a 49
+                  40 to 49
                 </div>
               </div>
             </OptionButton>
@@ -106,12 +106,12 @@ const Welcome = () => {
               <div className="relative h-[11rem] bg-gray-100 rounded-xl overflow-hidden">
                 <img 
                   src="/images/mulher_50anos_modelo2.webp" 
-                  alt="50 ou mais" 
+                  alt="50 or more" 
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-[rgb(184,84,80)] bg-opacity-20"></div>
                 <div className="absolute bottom-3 left-3 text-white font-bold text-lg">
-                  50 ou mais
+                  50 or more
                 </div>
               </div>
             </OptionButton>

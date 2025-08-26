@@ -90,25 +90,25 @@ export const calculateScores = (answers) => {
 
 export const getResultStatus = (overall) => {
   if (overall >= 85) return { 
-    text: "Excelente", 
+    text: "Excellent", 
     color: "bg-gradient-to-r from-green-400 to-green-600", 
     textColor: "text-green-600",
     emoji: "🌟"
   };
   if (overall >= 75) return { 
-    text: "Muito Bom", 
+    text: "Very Good", 
     color: "bg-gradient-to-r from-blue-400 to-blue-600", 
     textColor: "text-blue-600",
     emoji: "✨"
   };
   if (overall >= 65) return { 
-    text: "Bom", 
+    text: "Good", 
     color: "bg-gradient-to-r from-yellow-400 to-yellow-600", 
     textColor: "text-yellow-600",
     emoji: "⭐"
   };
   return { 
-    text: "Pode Melhorar", 
+    text: "Can Improve", 
     color: "bg-gradient-to-r from-orange-400 to-orange-600", 
     textColor: "text-orange-600",
     emoji: "🎯"

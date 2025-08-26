@@ -67,7 +67,7 @@ const Analysis = () => {
           <div className="max-w-md mx-auto animate-fade-in">
             {/* Title */}
             <h1 className="text-2xl font-bold text-center mb-8 text-gray-900">
-              Análise inicial do seu perfil
+              Initial analysis of your profile
             </h1>
             
             {/* Top Section - Score and Profile */}
@@ -83,14 +83,14 @@ const Analysis = () => {
               <div className="bg-white rounded-2xl p-6 flex flex-col items-center justify-center relative shadow-sm border border-gray-200 overflow-hidden">
                 {/* Status Badge */}
                 <div className={`absolute top-3 left-3 right-3 px-3 py-1 rounded-full text-xs font-semibold text-white text-center bg-primary transform ${showScore ? 'translate-y-0 opacity-100' : '-translate-y-4 opacity-0'} transition-all duration-700 delay-800`}>
-                  Resultado: {resultStatus.text}
+                  Result: {resultStatus.text}
                 </div>
                 
                 {/* Profile Image */}
                 <div className={`w-20 h-20 rounded-full overflow-hidden mt-6 ring-2 ring-gray-200 transform ${showScore ? 'scale-100 opacity-100' : 'scale-95 opacity-0'} transition-all duration-700 delay-1000`}>
                   <img 
                     src={profileImage}
-                    alt="Perfil analisado" 
+                    alt="Analyzed profile" 
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -105,9 +105,9 @@ const Analysis = () => {
             {/* Notice */}
             <div className={`bg-primary rounded-2xl p-6 mb-6 transition-all duration-600 shadow-sm ${showNotice ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
               <p className="text-white leading-relaxed">
-                <strong>Seu corpo mostra sinais claros de desequilíbrio hormonal.</strong>
+                <strong>Your body shows clear signs of hormonal imbalance.</strong>
                 <br /><br />
-                Nosso protocolo de otimização hormonal + suporte com peptídeos está quase pronto para você.
+                Our hormonal optimization protocol + peptide support is almost ready for you.
               </p>
             </div>
 
@@ -118,7 +118,7 @@ const Analysis = () => {
                 showButton ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
               }`}
             >
-              Continuar
+              Continue
             </button>
           </div>
         </main>

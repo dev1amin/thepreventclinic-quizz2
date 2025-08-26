@@ -42,7 +42,7 @@ const QuizLayout = ({ children, showProgress = true, currentStep = 0, totalSteps
                 />
               </div>
               <div className="text-xs text-gray-500 mt-2 text-center">
-                {Math.round(getProgressWidth())}% completo
+                {Math.round(getProgressWidth())}% complete
               </div>
             </div>
           </div>
